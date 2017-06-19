@@ -1,0 +1,58 @@
+.bottom-down-link
+    +box
+
+    height: 0.34rem
+    padding: 0.11rem 0.08rem 0.11rem 0.03rem
+
+.bottom-down
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background-color: #fff
+    z-index: 10
+
+    .bottom-down-box
+        +box-flex
+
+        text-align: right
+
+    .button
+        display: inline-block
+        max-width: 1.04rem
+        height: 0.34rem
+        line-height: 0.34rem
+        margin-left: 0.08rem
+        padding: 0 0.12rem
+        background: $primary-color
+        text-align: center
+        color: #fff
+        font-size: 0.14rem
+        border-radius: 0.04rem
+
+    dl
+        margin-left: 0.08rem
+        margin-top: 0px
+        line-height: 1.4
+
+    .icon
+        width: 0.34rem
+        height: 0.34rem
+
+    dt
+        font-weight: 700
+        font-size: 0.12rem
+        color: #6c6c6c
+        line-height: 0.18rem
+
+    dd
+        font-size: 0.1rem
+        color: rgba(0, 0, 0, 0.28)
+        line-height: 0.16rem
+
+        img
+            margin-left: 0.05rem
+
+.app
+    .bottom-down
+        display: none

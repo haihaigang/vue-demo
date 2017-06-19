@@ -1,0 +1,80 @@
+.widget-pintuan-item
+	position: relative
+	display: flex
+	border-top: 1px solid #ebebeb
+	background-color: #fff
+
+	.widget-pintuan-item-thumb
+		width: 32%
+
+		img
+			display: block
+			max-width: 100%
+			max-height: 100%
+			opacity: 0
+			transition: 0.3s ease-in opacity
+		img.loaded
+			opacity: 1
+
+	.widget-pintuan-item-content
+		width: 68%
+		text-align: right
+		padding: 0.09rem 0.12rem 0.12rem 0
+		box-sizing: border-box
+
+		h4
+			height: 0.18rem
+			color: $secondary-font-color
+			font-size: 0.13rem
+
+			+ellipsis
+
+		h3
+			height: 0.21rem
+			color: #000
+			font-size: 0.15rem
+			font-weight: bold
+
+			+ellipsis
+
+		.widget-pintuan-item-price
+			font-size: 0.13rem
+			color: $secondary-font-color
+
+			.tuan
+				margin-right: 0.08rem
+
+			.single
+				margin-right: 0.04rem
+				text-decoration: line-through
+
+			.buy
+				color: #ff374a
+
+				strong
+					font-size: 0.23rem
+
+		.widget-pintuan-item-submit
+			padding-top: 0.07rem
+
+			button
+				width: 0.9rem
+				height: 0.24rem
+				padding: 0
+				line-height: 0.24rem
+				text-align: center
+				color: #fff
+				font-size: 0.12rem
+				background-color: $primary-color
+				border: none
+				outline: none
+
+				+border-radius(0.24rem)
+
+	.widget-pintuan-item-tag
+		position: absolute
+		top: 0
+		left: 0.08rem
+		display: block
+		width: 0.4rem
+		height: 0.4rem

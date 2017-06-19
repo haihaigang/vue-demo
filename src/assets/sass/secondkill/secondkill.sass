@@ -1,0 +1,248 @@
+.secondkill-banner-swiper img
+    display: block
+    width: 100%
+    height: auto
+    margin: 0 auto
+
+.timeaxis-wrap
+    width: 100%
+    position: relative
+    z-index: 10
+    height: 0.48rem
+    color: #999
+    background: #574235
+
+.wrap-fixed
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 15
+    opacity: 1
+    -webkit-transition: opacity 300ms linear
+    transition: opacity 300ms linear
+
+.wrap-fixed.wrap-static
+    z-index: -10
+    opacity: 0
+
+.timeaxis-bar
+    position: relative
+    z-index: 19
+    height: 100%
+
+    +box
+
+    .timeaxis-item
+        position: relative
+
+        +box
+
+        +box-align
+
+        +box-pack(center)
+
+        width: 25%
+        color: #d1d1d1
+        text-align: center
+
+        &.active
+            background: $primary-color
+            color: #fff
+
+            &:after
+                content: ""
+                position: absolute
+                top: 0.47rem
+                left: 0
+                right: 0
+                z-index: 18
+                display: block
+                height: 0
+                width: 0
+                margin: auto
+                border-top: 0.07rem solid $primary-color
+                border-left: 0.07rem solid transparent
+                border-right: 0.07rem solid transparent
+
+        .timeaxis-time
+            font-size: 0.16rem
+            margin: 0.03rem auto 0
+            line-height: 0.18rem
+
+        .timeaxis-info
+            font-size: 0.1rem
+
+.batch-header
+    padding: 0 0.15rem
+    background: $primary-background-color
+
+    +box
+
+    height: 0.32rem
+    line-height: 0.32rem
+    border-bottom: 1px solid #eee
+
+    .batch-title
+        font-size: 0.15rem
+        color: #c1854d
+        vertical-align: middle
+
+        span
+            background: #c1854d
+
+    .batch-countdown
+        display: block
+
+        +box-flex
+
+        text-align: right
+
+.goods-detail-likegoods
+    background: #fff
+
+    .guess-like
+        border-bottom: $border-default
+
+        span
+            background: #4A4A4A
+
+    .goods-item
+        border-right: $border-default
+        border-bottom: $border-default
+
+        .import-price
+            padding: 0
+            font-size: 0.18rem
+
+        &:nth-child(2n)
+            border-right: 0
+
+        &:nth-child(2n-1)
+            width: calc(50% - 0.02rem)
+
+.batch-title, .guess-like
+    span
+        content: ""
+        margin-right: 0.08rem
+        border-radius: 0.02rem
+        width: 0.08rem
+        height: 0.08rem
+        display: inline-block
+
+.batch
+    .goods-item
+        position: relative
+        border-bottom: solid 0.08rem $border-default-color
+
+        .thumb-box
+            padding: 0.04rem
+            box-sizing: border-box
+            -webkit-flex: 0.77
+            flex: 0.77
+
+        &.disabled
+            .thumb-empty
+                height: 0.92rem
+                width: 0.92rem
+                margin: (-0.46rem) 0 0 -0.46rem
+
+                dl
+                    margin-top: 0.26rem
+
+                dl > dt
+                    font-size: 0.15rem
+
+                dl > dd
+                    line-height: 2.5
+
+            .content h3
+                color: #b2b2b2
+
+        .thumb
+            width: 100%
+
+        .content
+            position: relative
+
+            .subtitle
+                font-size: 0.11rem
+                color: $primary-color
+                margin-top: 0.04rem
+
+                &.hour-sub
+                    font-size: 0.13rem
+
+            .limit
+                font-size: 0.11rem
+                color: #b2b2b2
+                text-align: justify
+                margin-top: 0.04rem
+
+            .import-price
+                line-height: 2
+                font-size: 0.18rem
+                padding: 0
+
+                .mktprice
+                    font-size: 0.12rem
+                    color: #b2b2b2
+                    text-align: left
+
+            h3
+                height: 26%
+                padding-top: 0.09rem
+                color: #000000
+                font-size: 0.14rem
+
+            .bar
+                background-color: #d8d8d8
+                border-radius: 1rem
+                height: 0.12rem
+                margin-top: 0.04rem
+                line-height: 0.07rem
+                width: 1.06rem
+
+                .bar-top
+                    background-color: $primary-color
+                    border-radius: 1rem
+                    width: 1.06rem
+                    height: 0.12rem
+                    position: relative
+                    top: 0
+                    left: 0
+
+            .more-click
+                padding: 0.3rem 0.07rem 0.1rem 0.3rem
+                bottom: 1%
+                right: 0.01rem
+                position: absolute
+                font-size: 0.12rem
+                text-align: center
+
+            .goods-more
+                width: 0.6rem
+                line-height: 0.23rem
+                height: 0.23rem
+                border: 0.01rem solid $primary-color
+                border-radius: 0.02rem
+                color: $primary-color
+                padding: 0.05rem
+
+        .goods-qty
+            color: $primary-color
+            bottom: 2%
+            right: 0.08rem
+
+            i
+                font-size: 0.28rem
+
+.main-ads
+    margin: 0 auto
+
+@media screen and (max-device-width: 362px)
+    .batch .goods-item
+        border-bottom: solid 0.06rem $border-default-color
+
+        .content
+            h3
+                height: 34%

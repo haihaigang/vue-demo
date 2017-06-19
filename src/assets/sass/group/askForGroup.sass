@@ -1,0 +1,378 @@
+
+
+.ask-infor
+    background-color: #fff
+    padding: 0.15rem 0 0.14rem 0
+
+    +box
+
+    +box-pack(justify)
+
+    .pic
+        width: 0.4rem
+        height: 0.4rem
+        border: 1px solid #fff
+        border-radius: 100%
+        margin: 0 0.16rem
+
+        img
+            width: 100%
+            border-radius: 100%
+
+    .word
+        padding-right: 0.17rem
+
+        +box-flex
+
+        .title
+            +box
+
+            +box-pack(justify)
+
+        .name
+            color: #576b95
+            display: block
+
+            +box-flex
+
+        .time
+            font-size: 0.12rem
+            color: #737373
+            display: block
+
+        .words
+            color: #2d2d2d
+            margin-bottom: 0.07rem
+
+        em
+            color: $primary-color
+            font-style: normal
+
+        ul
+            +box
+
+        li
+            +box-flex
+
+            margin-right: 0.04rem
+
+            img
+                width: 100%
+                display: block
+
+        .none
+            margin-right: 0
+
+        .sj
+            width: 0
+            height: 0
+            border-left: 6px solid transparent
+            border-right: 6px solid transparent
+            border-bottom: 8px solid #f3f3f5
+            margin-left: 0.2rem
+
+        .bar
+            height: 0.26rem
+            line-height: 0.26rem
+            font-size: 0.1rem
+            width: 100%
+            background-color: #f3f3f5
+            color: #b2b2b2
+
+        .icon-like
+            color: $secondary-color
+            margin: 0 0.08rem
+
+.ads-pic
+    width: 100%
+    display: block
+
+.group-num
+    width: 100%
+    height: 0.37rem
+    background: #fff
+    color: $secondary-color
+    margin: 0.01rem 0
+
+    +box
+
+    +box-align
+
+    +box-pack(justify)
+
+    span
+        padding-left: 0.08rem
+        display: block
+        line-height: 0.32rem
+
+    em
+        padding-right: 0.08rem
+        list-style: none
+        font-size: 0.12rem
+        display: block
+
+    b
+        color: $primary-color
+        font-size: 0.22rem
+        list-style: none
+
+.askfor-group-share
+    .group-guide-box
+        display: block
+        position: static
+        background: #fff
+        height: auto
+
+        .reinitial
+            box-shadow: none
+
+    .group-join-user.show-group-detail
+        display: block
+        background: #fff
+        margin-bottom: 0.08rem
+
+        .join-groupuser-list
+            +box
+
+            +box-align
+
+            height: 0.75rem
+            border-bottom: 1px solid #f1f1f1
+
+            &.on
+                +box-shadow($shadow-default)
+
+                .show-detail-user-box
+                    +box-shadow($shadow-default)
+
+            .swiper-user
+                display: block
+                position: relative
+                overflow: hidden
+                z-index: 1
+                text-align: center
+                padding: 0 0.02rem 0 0.1rem
+
+                +box-flex
+
+                ul
+                    > li
+                        width: 23.5%
+                        padding-top: 0
+
+                        .idx0
+                            &:before
+                                content: "团长"
+                                position: absolute
+                                top: 2px
+                                right: -6px
+                                font-size: 8px
+                                color: #fff
+                                background-color: $primary-color
+
+                                +border-radius(0.1rem)
+
+                                padding: 2px
+
+                        .idx1
+                            &:before
+                                content: "沙发"
+                                position: absolute
+                                top: 2px
+                                right: -6px
+                                font-size: 8px
+                                color: #fff
+                                background-color: #F5A623
+
+                                +border-radius(0.1rem)
+
+                                padding: 2px
+
+                        .idx1
+                            &.empty:before
+                                content: " "
+                                background: none
+
+                        > img
+                            width: 0.45rem
+                            height: 0.45rem
+
+                        > div
+                            margin: 0
+                            width: 0.42rem
+                            height: 0.42rem
+
+                            img
+                                width: 0.42rem
+                                height: 0.42rem
+
+
+            .show-detail-user-box
+                display: block
+                height: 0.75rem
+
+                +box
+
+                +box-align
+
+                p
+                    display: block
+
+                    +box-flex
+
+                    color: $secondary-color
+                    font-size: 0.11rem
+                    line-height: 0.16rem
+                    padding: 0 0.1rem
+
+                i
+                    display: block
+                    width: 0.19rem
+                    height: 0.19rem
+                    line-height: 0.19rem
+                    padding-right: 0.03rem
+                    color: #272636
+                    -moz-transform: rotate(0)
+                    -webkit-transform: rotate(0)
+                    transform: rotate(0)
+                    vertical-align: middle
+                    -webkit-transition: all 0.2s ease-in
+                    transition: all 0.2s ease-in
+                    
+                    &.icon-rotate
+                        display: block
+                        -moz-transform: rotate(90deg)
+                        -webkit-transform: rotate(90deg)
+                        transform: rotate(90deg)
+
+        .group-user-goods-list
+            margin-top: 0.04rem
+            font-size: 0.8em
+            overflow: hidden
+
+            .group-user-goods-item
+                position: relative
+
+                +box
+
+                +box-align
+
+                height: 0.4rem
+                padding: 0.06rem 0.16rem 0.06rem 0.08rem
+                background-color: #fff
+                overflow: hidden
+                border-bottom: $border-default
+                &.idx0
+                    &:before
+                        content: "团长"
+                        position: absolute
+                        top: 2px
+                        left: 30px
+                        font-size: 8px
+                        color: #fff
+                        background-color: $primary-color
+                        -webkit-border-radius: 0.1rem
+                        -moz-border-radius: 0.1rem
+                        -ms-border-radius: 0.1rem 0.1rem 0.1rem 0.1rem
+                        -o-border-radius: 0.1rem
+                        border-radius: 0.1rem
+                        padding: 2px
+                &.idx1
+                    &:after
+                        content: "沙发"
+                        position: absolute
+                        right: -0.2rem
+                        bottom: 0.04rem
+                        height: 0.18rem
+                        padding: 0 0.2rem
+                        line-height: 0.18rem
+                        font-size: 0.13rem
+                        color: #fff
+                        background-color: $primary-color
+                        -webkit-transform: rotate(317deg)
+                        transform-origin: 50% 50%
+
+                .avatar
+                    display: block
+                    width: 0.4rem
+                    height: 0.4rem
+
+                    +border-radius(100%)
+
+                .name
+                    display: block
+
+                    +box-flex
+
+                    padding-left: 0.08rem
+                    white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    font-size: 0.13rem
+                    color: #3c2e26
+
+                    span
+                        font-size: 0.11rem
+                        color: #bdbdbd
+
+                .buy-goods
+                    display: block
+                    position: relative
+
+                    .buy-goods-item
+                        display: block
+                        position: relative
+                        float: left
+                        width: 0.25rem
+                        height: 0.25rem
+                        padding-top: 0
+                        margin-left: -0.12rem
+                        border: 1px solid #fff
+
+                        +border-radius(100%)
+
+                        +box-shadow($shadow-default)
+
+                        img
+                            width: 0.25rem
+                            height: 0.25rem
+
+                            +border-radius(100%)
+
+                        i.buy-goods-num
+                            display: block
+                            position: absolute
+                            top: 50%
+                            margin-top: -0.08rem
+                            left: 50%
+                            margin-left: -0.09rem
+                            width: 0.16rem
+                            height: 0.18rem
+                            text-align: center
+                            color: #fff
+                            z-index: 7
+                            font-size: 0.12rem
+
+                        &.only-item
+                            &:first-child:before
+                                display: block
+                                content: " "
+                                position: absolute
+                                left: 0
+                                top: 0
+                                width: 0.25rem
+                                height: 0.25rem
+                                z-index: 55
+                                background: rgba(0, 0, 0, 0.4)
+
+                                +border-radius(100%)
+
+        .show-more
+            background: #FFF
+            height: 0.36rem
+            font-size: 0.13rem
+            color: $thirdary-font-color
+            line-height: 0.36rem
+            text-align: center
+            margin-bottom: 0.08rem
+

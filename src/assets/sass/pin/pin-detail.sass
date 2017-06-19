@@ -1,0 +1,722 @@
+/* ==== public ==== */
+.float-l
+    float: left
+
+.float-r
+    float: right
+
+.inline-block
+    display: inline-block
+
+.align-c
+    text-align: center
+
+.pin-detail-content
+    margin-bottom: .44rem
+
+    .widget-title
+        margin-top: .08rem
+
+.text-overflow
+    +ellipsis($line: 2)
+
+.font-red
+    color: #ff374a
+
+.font-gray
+    color: $secondary-font-color
+
+.font-orange
+    color: $primary-color
+
+.font-brown
+    color: $secondary-color
+
+.font-small
+    font-size: .1rem
+
+.font-normal
+    font-size: .12rem
+
+.font-big
+    font-size: .13rem
+
+
+.pin-group-detail-section
+    position: relative
+
+/* main pin product */
+.pin-detail-product
+    background-color: #fff
+    position: relative
+
+.swiper-slide
+    img
+        width: 100%
+        vertical-align: middle
+
+.pin-detail-msg
+    padding: .08rem .08rem 0
+
+    h2
+        width: 100%
+        font-size: .16rem
+        font-weight: bold
+
+    h4
+        width: 100%
+        font-size: .12rem
+
+.pin-detail-price
+    .price-l
+        font-weight: bold
+        font-size: .17rem
+        &::first-letter
+            font-size: .07rem
+    
+    .price-r
+        font-weight: bold
+        font-size: .13rem
+
+    > del
+        font-size: .09rem
+
+
+.pin-detail-discount
+    margin: .05rem 0
+    line-height: 1
+
+    > span
+        @include border-radius(.02rem)
+        @include ellipsis(1)
+        max-width: 60%
+        position: relative
+        border: solid 1px $primary-color
+        padding: .08rem
+        
+        > i
+            -webkit-transform: skew(-45deg)
+            transform: skew(-45deg)
+            right: -0.05rem
+            bottom: 0
+            position: absolute
+            width: .09rem
+            height: .09rem
+            background-color: $primary-color
+
+
+.pin-detail-groupnum
+    padding-bottom: .06rem
+
+.pin-detail-bot
+    height: .3rem
+    line-height: .3rem
+
+
+.pin-detail-pics
+    margin-top: .08rem
+    img
+        display: inline-block
+        width: 100%
+        vertical-align: middle
+
+
+/* 团商品详情 */
+.group-detail-product
+    @include flex-box
+    @include align-center
+    background-color: #fff
+    position: relative
+    height: 1.14rem
+
+.group-detail-img
+    padding: .08rem
+    width: .98rem
+    height: .98rem
+    display: inline-block
+
+.group-detail-msg
+    position: relative
+    -webkit-flex: 1
+    flex: 1
+    height: .98rem
+    padding: .08rem .08rem .08rem 0
+
+    h2
+        @include ellipsis(2)
+        font-size: .15rem
+
+    .pin-detail-price
+        position: absolute
+        bottom: .18rem
+        left: 0
+
+.group-state-img
+    display: inline-block
+    bottom: .08rem
+    right: .08rem
+    width: .92rem
+    height: .92rem
+    position: absolute
+    z-index: 2
+
+.pin-ads
+    margin-top: .08rem
+    a
+        display: block
+
+        img
+            width: 100%
+            vertical-align: middle
+
+
+/* 团界面 */
+.pin-group-content
+    padding-top: .1rem
+
+.group-member-list
+    padding: 0 .26rem .05rem .26rem
+    li
+        @include flex-box
+        @include align-center
+        @include justify-center
+        width: 20%
+        float: left
+        padding: .03rem 0
+
+        &:first-child
+            position: relative
+
+            &:before
+                @include border-radius(.17rem)
+                content: '团长'
+                top: .03rem
+                right: .01rem
+                padding: 0 .05rem
+                height: .17rem
+                line-height: .17rem
+                font-size: .1rem
+                color: #fff
+                background-color: $primary-color
+                position: absolute
+                display: inline-block
+                text-align: center
+
+
+        > img
+            @include border-radius(100%)
+            display: inline-block
+            border: solid .02rem #fff
+            width: .4rem
+            height: .4rem
+        &.ishot
+            position: relative
+            
+            &:after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+                right: 0
+                background-image: url(../images/pin/avatar-board.png)
+                background-position: center
+                background-size: 0.45rem 0.45rem
+                background-repeat: no-repeat
+
+.isme
+    .idx1
+        position: relative
+
+        &:before
+            @include border-radius(.17rem)
+            content: '我'
+            top: .03rem
+            right: .01rem
+            padding: 0 .05rem
+            height: .17rem
+            line-height: .17rem
+            font-size: .1rem
+            color: #fff
+            background-color: $primary-color
+            position: absolute
+            display: inline-block
+            text-align: center
+
+
+.group-member-more 
+    width: .4rem
+    height: .4rem
+    text-align: center
+    line-height: .4rem
+
+    .icon-iconmoregruop
+        font-size: .08rem
+        line-height: 1
+        color: #dcdcdc
+
+.group-state-msg
+    font-size: .13rem
+    margin-bottom: .1rem
+
+    .font-orange
+        margin: 0 .01rem
+        font-size: .24rem
+
+.group-time-bar ,
+.group-show-handle
+    padding: 0 .08rem
+    margin-bottom: .1rem
+    font-size: .13rem
+
+.group-show-handle
+    span
+        @include flex-box
+        @include align-center
+        @include justify-center
+        .icon-Rectangle
+            margin-left: .05rem
+            font-size: .07rem
+            color: $secondary-color
+
+
+.group-member-list-sub
+    margin-top: .05rem
+    li
+        margin-bottom: .05rem
+        box-sizing: border-box
+        font-size: .13rem
+        padding: 0 .08rem
+        width: 100%
+        height: .4rem
+        overflow: hidden
+        background-color: #fff
+
+        > img
+            @include border-radius(100%)
+            display: inline-block
+            margin: .05rem .05rem 0 0
+            width: .3rem
+            height: .3rem
+            
+        > span.float-l
+            margin: 0.11rem 0.05rem 0 0
+            max-width: 1rem
+            overflow: hidden
+            position: relative
+            text-overflow: ellipsis
+            white-space: nowrap
+            float: left
+
+        > span.float-r
+            margin: .13rem 0 0 .05rem
+            float: right
+            
+        &:first-child
+            position: relative
+            background-color: #504f4f
+            color: #fff
+
+            &:before
+                -webkit-transform: rotate(45deg)
+                transform: rotate(45deg)
+                content: ''
+                top: -.04rem
+                left: 50%
+                margin-left: -.05rem
+                width: .1rem
+                height: .1rem
+                background-color: #504f4f
+                position: absolute
+                display: inline-block
+
+        &:last-child
+            margin-bottom: 0
+        &.ishot
+            position: relative
+            &:after
+                content: ''
+                position: absolute
+                top: 0.05rem
+                left: 0.08rem
+                width: 0.3rem
+                height: 0.3rem
+                background-image: url(../images/pin/avatar-board.png)
+                background-position: center
+                background-size: 0.3rem 0.3rem
+                background-repeat: no-repeat
+
+
+
+/* 活动玩法 */
+.grouprule
+    padding-bottom: .14rem
+    background-color: #fff
+    display: block
+
+    .group-title
+        padding: .08rem
+        color: $secondary-color
+        text-align: left
+        span
+            line-height: 1
+        .float-r
+            margin-top: .02rem
+
+
+
+.grouprule-content
+    @include flex-box
+    @include align-center
+    @include justify-center
+    font-size: .11rem
+    color: #9b9b9b
+
+.grouprule-item
+    @include flex-box
+    @include align-center
+    @include justify-center
+    position: relative
+    width: 25%
+    text-align: center
+    
+    &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: .01rem
+        background-color: $secondary-font-color
+        top: calc(50% - 0.01rem)
+        left: 0
+        z-index: 0
+
+.grouprule-text
+    width: 50%
+    position: relative
+    z-index: 1
+    padding: 0 .05rem
+    background-color: #fff
+    display: inline-block
+    
+    &:before,
+    &:after
+        @include border-radius(100%)
+        top: 50%
+        margin-top: -.032rem
+        position: absolute
+        content: ''
+        width: .05rem
+        height: .05rem
+        background-color: $secondary-font-color
+    &:before
+        left: -.035rem
+    &:after
+        right: -.035rem
+
+.grouprule-item-1 .grouprule-text:before,
+.grouprule-item-4 .grouprule-text:after
+    display: none
+
+.grouprule-item-2 .grouprule-text
+    width: 63%
+
+.grouprule-box
+    position: relative
+    z-index: 1
+    -webkit-flex: 1
+    flex: 1
+    height: .1rem
+    background-color: transparent
+
+.grouprule-box.g-none
+    background-color: #fff
+
+.grouprule-item.active
+    &:after
+        background-color: $primary-color
+
+    .grouprule-text
+        color: $primary-color
+
+        &:before,
+        &:after
+            background-color: $primary-color
+
+
+/* 推荐团列表 */
+.recommend-group
+    margin-top: .01rem
+    padding: .1rem .08rem
+    background-color: #fff
+
+.recommend-title
+    font-size: .12rem
+
+.recommend-list
+    margin-top: .02rem
+
+    li
+        @include border-radius(.4rem)
+        border: solid .01rem #ff8500
+        width: 100%
+        height: .38rem
+        margin-top: .08rem
+
+
+.recommend-user-pic
+    @include border-radius(.36rem)
+    width: .36rem
+    height: .36rem
+    border: solid .01rem #fff
+
+.recommend-go
+    text-align: center
+    font-size: .15rem
+    width: .76rem
+    height: 100%
+    line-height: .38rem
+    background-color: $primary-color
+    color: #fff
+    border-top-right-radius: .36rem
+    border-bottom-right-radius: .36rem
+
+.recommend-user-msg
+    margin: .01rem .05rem
+
+    > h4
+        @include ellipsis(1)
+        width: .8rem
+        color: #574235
+        font-size: .13rem
+    > p
+        color: #574235
+        font-size: .12rem
+        
+.recommend-group-time
+    margin: .05rem
+    width: .9rem
+    text-align: right
+
+    .font-orange
+        font-size: .11rem
+    .font-gray
+        font-size: .09rem
+
+
+
+
+/* 倒计时条 */
+.group-count-down
+    @include flex-box
+    @include align-center
+
+    span
+        display: inline-block
+        font-size: 0.8em
+        color: #686868
+
+    em
+        @include border-radius(0.02rem)
+        color: #fff
+        margin: 0 .02rem
+        padding: .02rem .04rem
+        background-color: #686868
+
+    .text-line
+        height: .01rem
+        background-color: #686868
+        -webkit-flex: 1
+        flex: 1
+
+    .text-content
+        padding: 0 0.1rem
+
+
+
+
+
+
+
+
+
+/* 底部按钮 */
+
+.bottom-btns
+    @include flex-box
+    @include align-center
+    height: .48rem
+    background: #ffffff
+    padding: 0
+    box-shadow: 0px -1px 2px 0px rgba(178, 178, 178, 0.5)
+
+    .home-button
+        @include flex-box
+        @include align-center
+        @include justify-center
+        -webkit-flex-wrap: wrap
+        flex-wrap: wrap
+        width: 0.5rem
+        color: $primary-color
+
+        i
+            font-size: .24rem
+            line-height: 1
+        span
+            display: block
+            line-height: 1
+            margin-top: -0.02rem
+
+
+    .pin-detail-btns 
+        @include flex-box
+        @include align-center
+        @include justify-center
+        -webkit-flex: 1
+        flex: 1
+        -webkit-flex-wrap: wrap
+        flex-wrap: wrap
+        height: 100%
+
+        li
+            @include box-sizing(border-box)
+            @include flex-box
+            @include align-center
+            @include justify-center
+            -webkit-flex: 1
+            flex: 1
+            height: 100%
+            font-size: .14rem
+            color: #fff
+
+            &.btn-countdown
+                background-color: #ffce00
+
+            &.btn-open
+                background: $primary-color
+
+            &.btn-buy
+                background: #574235
+
+            &.disabled
+                background-color: #d4d4d4
+            
+            span
+                display: block
+                line-height: 1
+    
+            em
+                font-size: .16rem
+                line-height: 1.5
+                b
+                    display: inline
+                    font-weight: normal
+                    font-size: .08rem
+
+.pin-detial-pic-control
+    @include flex-box
+    @include align-center
+    @include justify-center
+    height: .4rem
+    background-color: #fff
+    border-top: 0
+
+    &:before
+        content: '展开图文详情'
+
+    .icon-more2
+        margin-left: .02rem
+        -webkit-transform: rotate(90deg)
+        transform: rotate(90deg)
+
+    &.on
+        border-top: $border-default
+        border-bottom: 0
+
+        &:before
+            content: '收起图文详情'
+
+        .icon-more2
+            -webkit-transform: rotate(-90deg)
+            transform: rotate(-90deg)
+
+
+.pin-share
+    top: 0
+    bottom: 0
+    left: 0
+    color: #fff
+
+.pin-build-address
+    top: 0.36rem
+    bottom: 0
+    left: 0
+    color: #fff
+    
+.pin-share-tip
+    position: absolute
+    top: 0
+    right: 20px
+    padding-top: 99px
+    padding-right: 65px
+    background-image: url(../images/common/jiantou.png)
+    background-repeat: no-repeat
+    background-position: top right
+    background-size: auto 110px
+
+    &.shaking
+        -webkit-animation: shaking 200ms ease-in infinite
+        -moz-animation: shaking 200ms ease-in infinite
+        -ms-animation: shaking 200ms ease-in infinite
+        -o-animation: shaking 200ms ease-in infinite
+        animation: shaking 200ms ease-in infinite
+        transition-delay: 0s
+
+.pin-address-tip 
+    position: absolute
+    padding-top: 130px
+    background-image: url(../images/common/jiantou.png)
+    background-repeat: no-repeat
+    background-position: 45% 12px
+    background-size: auto 110px
+    text-align: center
+    width: 100%
+
+
+.pin-share-content
+    position: absolute
+    top: 40%
+    width: 100%
+    text-align: center
+
+.pin-share-title
+    font-size: 24px
+
+.pin-share-button
+    display: block
+    width: 168px
+    height: 48px
+    margin: 0 auto 0.24rem auto
+    line-height: 48px
+    font-size: 1.2em
+    border: 1px solid #FFFFFF
+
+    +border-radius
+
+    background-color: rgba(0, 0, 0, 0)
+
+
+/* ios5  */
+@media screen and (max-device-width: 362px) 
+    .group-member-list
+        padding: 0 .12rem
+
+
+    .grouprule-text
+        width: 56%
+
+    .grouprule-item-2 .grouprule-text
+        width: 70%
+/* iphone 6*/
+@media screen and (min-device-width: 375px)
+    .group-member-list-sub li>span.float-l
+        max-width: 1.5rem

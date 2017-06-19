@@ -1,0 +1,189 @@
+.group-detail-bg
+    position: fixed
+    z-index: 90
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.4)
+    opacity: 0
+    transition-property: opacity
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+    transition-duration: 300ms
+
+    &.open
+        opacity: 1
+
+        .group-detail
+            transform: translateY(0)
+
+.group-detail
+    position: absolute
+    left: 4%
+    top: 10%
+    bottom: 10%
+    right: 4%
+    background-color: #fff
+
+    +border-radius(0.04rem)
+
+    transform: translateY(50%)
+    transition-property: transform
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+    transition-duration: 300ms
+
+    &.open
+        transform: translateY(0)
+
+.group-detail-content
+    position: absolute
+    top: 0
+    bottom: 0.48rem
+    width: 100%
+    text-align: center
+    overflow: hidden
+
+    .group-detail-main
+        position: absolute
+        z-index: 2
+        width: 100%
+        height: 100%
+        background-color: #fff
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.14)
+        transition-property: height
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+        transition-duration: 300ms
+
+        +border-radius(0, 0.04rem, 0.04rem, 0, 0)
+
+        > *
+            transition-property: all
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+            transition-duration: 300ms
+
+        .thumb
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 294px
+            display: block
+            padding: 0.14rem
+            box-sizing: border-box
+
+            img
+                display: block
+                max-width: 100%
+                max-height: 100%
+                margin: 0 auto
+
+        .content
+            position: absolute
+            top: 294px
+            left: 0
+            right: 0
+            padding: 0.08rem
+
+            h3
+                position: relative
+                height: 0.22rem
+                margin-bottom: 0.04rem
+                color: #000
+                font-size: 0.15rem
+                font-weight: bold
+
+                +ellipsis
+
+
+            h4
+                position: relative
+                height: 0.18rem
+                margin-bottom: 0.04rem
+                font-size: 0.13rem
+                color: $secondary-font-color
+
+                +ellipsis
+
+
+            p
+                position: relative
+                height: 0.22rem
+                line-height: 0.22rem
+                margin-bottom: 0.04rem
+                font-size: 0.09rem
+                color: #ff374a
+
+                em
+                    font-size: 0.18rem
+
+            span
+                position: absolute
+                max-width: 100%
+                transition-property: left
+                transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+                transition-duration: 300ms
+
+                +ellipsis
+
+    .group-detail-desc
+        position: absolute
+        top: 100%
+        bottom: 0
+        transition-property: top
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+        transition-duration: 300ms
+
+        img
+            display: block
+            max-width: 100%
+
+    .group-detail-tip
+        position: absolute
+        z-index: 3
+        bottom: 0
+        width: 100%
+        padding: 0.07rem 0
+        font-size: 0.12rem
+        color: $secondary-font-color
+        transition-property: opacity
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+        transition-duration: 300ms
+
+    &.up
+        .group-detail-main
+            height: 0.9rem
+
+            .thumb
+                width: 0.9rem
+                height: 0.9rem
+
+            .content
+                top: 0
+                left: 0.8rem
+
+                span
+                    left: 0
+
+        .group-detail-desc
+            top: 0.9rem
+            overflow-y: auto
+
+        .group-detail-tip
+            opacity: 0
+
+.group-detail-btn
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 0.48rem
+    line-height: 0.48rem
+    padding: 0
+    font-size: 0.15rem
+    font-weight: bold
+    color: $primary-color
+    background-color: #f5f5f5
+    text-align: center
+    outline: none
+    border: none
+
+    +border-radius(0, 0, 0, 0.04rem, 0.04rem)

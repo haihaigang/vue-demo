@@ -4,8 +4,9 @@
 <template>
     <div class="chatapp">
         <avatar :url="avatar"></avatar>
-        <p>avatar = {{avatar}}</p>
-        <p>getAvatarFromState = {{getAvatarFromState}}</p>
+        <me-nav></me-nav>
+        <quick :data="quickData"></quick>
+        <quick :data="quickData2"></quick>
     </div>
 </template>
 <!--控制-->
@@ -14,11 +15,13 @@ import {
     mapGetters
 } from 'vuex'
 import Avatar from './Avatar.vue'
+import MeNav from './MeNav.vue'
+import Quick from './Quick.vue'
 
 export default {
     name: 'App',
     components: {
-        Avatar
+        Avatar, MeNav, Quick
     },
     computed: {
         avatar() {
@@ -26,6 +29,12 @@ export default {
         },
         getAvatarFromState(){
             return this.$store.state.avatar
+        },
+        quickData(){
+            return this.$store.getters.quickData
+        },
+        quickData2(){
+            return this.$store.getters.quickData2
         }
     },
     computed2: mapGetters([

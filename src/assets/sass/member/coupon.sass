@@ -1,0 +1,326 @@
+.coupon
+    height: 100%
+    padding-bottom: 10px
+
+    +border-radius(0.04rem, 0, 0.04rem, 0.04rem, 0.04rem)
+
+    .coupon-tabs
+        +box
+
+        height: 0.48rem
+        background-color: #fff
+        z-index: 10
+
+        +box-shadow($shadow-default)
+
+.coupon-tabs
+    background: white
+    position: relative
+
+    &.tabs-fixed .tab-link
+        color: $secondary-font-color
+        font-size: 16px
+        width: 100%
+        height: 0.48rem
+        line-height: 0.48rem
+
+        +box-flex
+
+        border: 0
+        margin: 0 0.15rem
+        border-bottom: 2px solid transparent
+        border-radius: 0
+
+    .tab-link
+        &.active
+            color: $primary-color
+
+            i
+                color: $primary-color
+                z-index: 100
+                position: absolute
+                display: block
+                width: 98%
+                left: 50%
+                margin-left: -49%
+                bottom: -2px
+                border-bottom: 2px solid $primary-color
+
+        position: relative
+        text-align: center
+        display: block
+        box-sizing: border-box
+        -webkit-appearance: none
+        -moz-appearance: none
+        -ms-appearance: none
+        appearance: none
+        background: none
+        padding: 0
+        margin: 0
+        height: 0.48rem
+        white-space: nowrap
+        position: relative
+        text-overflow: ellipsis
+        font-size: 0.16rem
+        font-family: inherit
+        cursor: pointer
+
+.tabs-fixed
+    position: fixed
+    z-index: 9
+    width: 100%
+    left: 0
+    top: 0
+
+.coupon-box
+    padding-top: 0.58rem
+    margin: 0 0.08rem
+    overflow: hidden
+
+    > ul > li
+        padding: 0
+        margin-bottom: 10px
+
+        a
+            display: block
+            position: relative
+            padding: 10px 8px
+            border: 0
+            background-image: -webkit-linear-gradient(0deg, #ffab25 0%, $primary-color 100%)
+            background-image: linear-gradient(135deg, #ffab25 0%, $primary-color 100%)
+            border-bottom: 0
+
+            +border-radius(0.04rem, 0.04rem, 0.04rem, 0, 0)
+
+            min-height: 0.96rem
+            z-index: 9
+
+            &.used
+                position: relative
+                border: 0
+                background: #fff
+
+            &.used h4, &.used span, &.used p
+                color: $primary-color
+
+            &.used em
+                display: block
+                position: absolute
+                z-index: 1
+                right: 0
+                top: 0
+                width: 1.05rem
+                height: 1.07rem
+                background: url(../images/member/img_haveused_on.png) no-repeat 16px -23px
+                background-size: 100% auto
+
+            &.expire
+                position: relative
+                border: 0
+                background-image: -webkit-linear-gradient(0deg, #e2e2e1 0%, #a8a8a8 100%)
+                background-image: linear-gradient(135deg, #e2e2e1 0%, #a8a8a8 100%)
+
+            &.expire em
+                display: block
+                position: absolute
+                z-index: 1
+                right: 0
+                top: 0
+                width: 1.05rem
+                height: 1.07rem
+                background: url(../images/member/img_beoverdue.png) no-repeat 16px -23px
+                background-size: 100% auto
+
+            &:after
+                content: ""
+                position: absolute
+                width: 18px
+                height: 18px
+                left: -9px
+                background: $primary-background-color
+                z-index: 9
+
+                +border-radius(100%)
+
+            &:before
+                content: ""
+                position: absolute
+                width: 18px
+                height: 18px
+                right: -9px
+                bottom: -9px
+                background: $primary-background-color
+                z-index: 9
+
+                +border-radius(100%)
+
+            > h4
+                font-size: 14px
+                color: #fff
+
+.coupon-info
+    padding: 8px 0 10px 3px
+
+    span
+        display: block
+        float: left
+        width: 25%
+        font-size: 13px
+        color: #fff
+
+        > b
+            display: inline
+            padding-left: 0
+            font-size: 3.2em
+            font-weight: normal
+
+    .remark-info
+        display: block
+        float: right
+        width: 75%
+        padding-top: 8px
+
+        p
+            text-align: right
+            line-height: 18px
+            font-size: 12px
+            color: #fff
+            word-wrap: break-word
+            overflow: hidden
+
+.expiry-date
+    display: block
+    position: relative
+    height: 0.41rem
+    line-height: 0.41rem
+    padding: 0 8px
+    border: 0
+    margin-top: -1px
+
+    +border-radius(0.04rem, 0, 0, 0.04rem, 0.04rem)
+
+    background-image: -webkit-linear-gradient(0deg, #ffab25 0%, $primary-color 100%)
+    background-image: linear-gradient(135deg, #ffab25 0%, $primary-color 100%)
+
+    &:before
+        content: ""
+        position: absolute
+        width: 100%
+        margin-left: -8px
+        height: 2px
+        background: url(../images/member/coupon_line.png) repeat-x 0 0
+
+    &.expire
+        border-top: 0
+        background-image: -webkit-linear-gradient(0deg, #e2e2e1 0%, #a8a8a8 100%)
+        background-image: linear-gradient(135deg, #e2e2e1 0%, #a8a8a8 100%)
+
+        &.expire:before
+            content: ""
+            position: absolute
+            width: 100%
+            margin-left: -8px
+            height: 2px
+            background: url(../images/member/coupon_line.png) repeat-x 0 0
+
+    &.used
+        border-top: 0
+        background: #fff
+
+        &:before
+            content: ""
+            position: absolute
+            width: 100%
+            margin-left: -8px
+            height: 2px
+            background: url(../images/member/coupon_line_on.png) repeat-x 0 0
+
+    &.used span
+        color: $primary-color
+
+    span
+        display: block
+        text-align: right
+        font-size: 13px
+        color: #fff
+
+.coupon-header
+    position: relative
+    height: 1.6rem
+    background: $primary-color
+
+    +box-shadow($shadow-default)
+
+    img
+        display: block
+        position: absolute
+        bottom: -0.4rem
+        height: 0.8rem
+        width: 0.8rem
+        left: 50%
+        margin-left: -0.4rem
+        border: 1px solid #fff
+
+        +border-radius(100%)
+
+.coupon .form-box
+    background: #fff
+    margin: 0 5%
+    border: 0
+
+    +box-shadow($shadow-default)
+
+    +border-radius(0.04rem, 0, 0, 0.04rem, 0.04rem)
+
+.coupon-form
+    .ipt-items
+        padding: 0.75rem 0 0.1rem 0
+
+        .val
+            width: 90%
+            margin: 0.15rem auto
+
+            > input
+                text-align: center
+                border-bottom: 1px solid #e6e6e6
+
+    .options
+        width: 82%
+        margin: 0 auto
+
+        .btn
+            &.show-coupon
+                margin-right: 0.37rem
+                color: $primary-color
+                background: #fff
+
+            &.coupon-used
+                margin-right: 0
+
+.cash-success
+    padding-top: 15px
+
+    label
+        display: block
+        font-size: 25px
+        height: 36px
+        color: #000
+        text-align: center
+        padding: 0
+
+    p.succ-tip
+        color: #4a4a4a
+        font-size: 13px
+        text-align: center
+        padding: 10px 0
+
+    .options
+        margin-top: 0.18rem
+
+.nodata.nocoupon-pic
+    display: block
+    padding-top: 1.6rem
+    width: 1.1rem
+    margin: 0.2rem auto
+    background: url(../images/member/icon_youhuiquan.png) no-repeat center center
+    background-size: 100% auto

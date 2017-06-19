@@ -1,0 +1,68 @@
+.apply
+    .items
+        padding: 0.01rem 0.15rem
+        margin-bottom: 1px
+        border: none
+        background-color: #fff
+
+        +border-radius(0)
+
+        +box-shadow($shadow-default)
+
+        .key
+            width: 0.85rem
+            color: $secondary-color
+            font-size: 17px
+
+        .addr-type-val
+            &:after
+                content: " "
+                position: absolute
+                top: 0.16rem
+                right: 0.13rem
+                font-size: 0.18rem
+                width: 0.08rem
+                height: 0.08rem
+                border-bottom: 2px solid #c7c7cc
+                border-right: 2px solid #c7c7cc
+                -webkit-transform: rotate(-45deg)
+
+        .val > input
+            font-size: 15px
+            text-align: right
+
+    .prompt
+        font-size: 0.13rem
+        color: #b2b2b2
+        text-align: left
+        padding: 0.04rem 0 0 0.16rem
+
+    .options
+        padding-top: 8px
+        width: 88%
+        margin: 0 auto
+
+        .btn
+            +border-radius(0.04rem)
+
+    .address-item
+        padding: 0.01rem 0 0.01rem 0.15rem
+
+        input[type="text"]
+            padding: 0.1rem 0.22rem
+
+.apply .is-default
+    .on
+        color: $primary-color
+        display: none
+
+    .off
+        display: block
+        color: $primary-color
+
+    .active
+        .on
+            display: block
+
+        .off
+            display: none

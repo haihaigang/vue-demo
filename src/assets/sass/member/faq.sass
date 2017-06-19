@@ -1,0 +1,113 @@
+.faq-content
+    width: 100%
+    background-color: #fff
+
+    .item
+        border-top: 1px solid #d1d1d1
+        background: #fff
+
+.item li
+    height: 0.44rem
+    position: relative
+    line-height: 0.44rem
+    color: #333
+    vertical-align: middle
+
+    a
+        display: block
+        height: 0.44rem
+
+        +box
+
+        .ico
+            padding: 0.07rem 0.14rem 0.08rem 0.15rem
+
+            img
+                width: 0.29rem
+                height: 0.29rem
+
+        .title
+            font-size: 0.16rem
+            color: $secondary-color
+            border-bottom: 1px solid #E9E8E8
+            box-shadow: inset 0px 0px 0px 0px #E9E8E8
+
+            +box-flex
+
+    &:after
+        content: " "
+        position: absolute
+        top: 0.2rem
+        right: 0.13rem
+        font-size: 0.18rem
+        width: 0.08rem
+        height: 0.08rem
+        border-bottom: 2px solid #c7c7cc
+        border-right: 2px solid #c7c7cc
+        -webkit-transform: rotate(-45deg)
+
+.faq-subcontent
+    width: 100%
+    display: none
+
+    .item
+        background-color: #fff
+
+        a
+            position: relative
+            padding-left: 0.15rem
+
+            +box
+
+            .title
+                font-size: 0.15rem
+                color: $secondary-color
+                padding: 0.06rem 0.24rem 0.07rem 0
+                border-bottom: 1px solid #E9E8E8
+                box-shadow: inset 0px 0px 0px 0px #E9E8E8
+
+                +box-flex
+
+            .down
+                content: ""
+                position: absolute
+                right: 0.13rem
+                font-size: 0.18rem
+                width: 0.08rem
+                height: 0.08rem
+                top: 50%
+                margin-top: -0.06rem
+                border-bottom: 2px solid #c7c7cc
+                border-right: 2px solid #c7c7cc
+                -webkit-transform: rotate(45deg)
+
+            .up
+                display: none
+                content: ""
+                position: absolute
+                right: 0.13rem
+                font-size: 0.18rem
+                width: 0.08rem
+                height: 0.08rem
+                top: 50%
+                margin-top: -0.04rem
+                border-bottom: 2px solid #c7c7cc
+                border-right: 2px solid #c7c7cc
+                -webkit-transform: rotate(-135deg)
+
+        .question-desc
+            padding: 0.07rem 0.08rem
+            border-bottom: $border-default
+            display: none
+
+            p
+                color: #b2b2b2
+                text-align: justify
+                word-wrap: break-word
+
+.faq-ad
+    padding: 0.15rem
+
+    img
+        display: block
+        max-width: 100%

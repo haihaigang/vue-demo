@@ -1,0 +1,447 @@
+#goodsPage
+	width: 100%
+	overflow: hidden
+	position: relative
+
+.cate-goods
+	display: none
+
+	.goods-qty
+		bottom: 0
+		right: 0
+
+		&.saleout-disabled
+			.btn.minus, .goods-qty-item
+				display: none
+
+		.btn
+			padding: 0.1rem 0.08rem
+
+			&.minus.active
+				display: block
+
+			span
+				box-shadow: none
+				background: $primary-color
+				color: #fff
+				border: 1px solid #fff
+
+				+box-shadow(0 0 0 1px $primary-color)
+
+				width: 0.16rem
+				height: 0.16rem
+				line-height: 0.16rem
+				font-size: 0.14rem
+
+			&.disabled span
+				// color: $secondary-font-color;
+				background: #9c9c9c
+				color: #fff
+
+				+box-shadow(0 0 0 1px #9c9c9c)
+
+		.num-ipt
+			line-height: 0.38rem
+			width: 0.16rem
+			overflow: hidden
+			font-size: 0.12rem
+
+	.goods-qty .goods-qty-item
+		position: absolute
+		left: 0.25rem
+
+		&.active
+			display: block
+
+	.cate-sku
+		.goods-qty .btn.minus, .goods-qty-item
+			display: block
+
+	.goods-qty .btn.minus, .goods-qty-item
+		display: none
+
+	.goods-group
+		display: block
+
+.goods-nav
+	span
+		display: block
+		height: 0.14rem
+		overflow: hidden
+		color: #9b9b9b
+
+	width: 0.64rem
+	background: #fff
+	bottom: 0.49rem
+	top: 0.44rem
+
+	a
+		height: 0.54rem
+		font-size: 0.09rem
+		line-height: 1.4
+		color: $primary-color
+		border-bottom: $border-default
+
+		&.active
+			border-bottom: 1px solid #fff
+			background: $primary-background-color
+
+			&.cate-hot
+				background: url(../images/category/classification_hot.png) 0 0 no-repeat $primary-background-color
+				background-size: 0.29rem 0.32rem
+
+			div
+				color: $primary-color
+
+		div
+			font-size: 0.12rem
+			color: $secondary-color
+			height: 0.3rem
+			line-height: 0.4rem
+
+.app .cate-goods .goods-nav
+	bottom: 0
+
+.cate-banner
+	display: none
+
+	img
+		display: block
+		width: 100%
+
+.cate-sku
+	.sku-head
+		h3
+			+ellipsis(2)
+
+.category-switch
+	position: fixed
+	top: 0.5rem
+	right: 0
+	width: 0.18rem
+	padding: 0.03rem 0.12rem
+	color: #fff
+	background: rgba(0, 0, 0, 0.5)
+
+	.iconfont
+		font-size: 0.18rem
+
+	&.block
+		.icon-switchshitu
+			display: block
+
+		.icon-switchliebiao
+			display: none
+
+	&.list
+		.icon-switchshitu
+			display: none
+
+		.icon-switchliebiao
+			display: block
+
+.cate-sku-close
+	position: absolute
+	right: 0.12rem
+	top: 0.08rem
+	color: #9b9b9b
+
+.cate-sku
+	width: 2.94rem
+	display: none
+	background: #fff
+	position: fixed
+	z-index: 93
+	padding: 0.08rem
+
+	+border-radius
+
+	.goods-qty
+		position: relative
+		border: 1px solid #E3E3E3
+		width: 1rem
+
+		+border-radius(0.03rem)
+
+		height: 0.3rem
+		text-align: center
+		line-height: 0.3rem
+		margin-top: 0.1rem
+		color: $primary-color
+
+		.num-ipt
+			width: 0.4rem
+			height: 0.3rem
+			line-height: 0.3rem
+			font-size: 0.15rem
+			border-left: 1px solid #e3e3e3
+			border-right: 1px solid #e3e3e3
+			text-align: center
+			color: $primary-color
+
+		.minus, .plus
+			+box-flex
+
+			font-size: 0.15rem
+
+		.active
+			color: $thirdary-font-color
+
+	.sku-head
+		position: relative
+		margin-right: 0.28rem
+
+		img
+			width: 0.66rem
+			height: 0.66rem
+			position: absolute
+			top: -0.33rem
+			border: 0.02rem solid #fff
+
+			+border-radius(0.03rem)
+
+		h3
+			margin-left: 0.75rem
+			font-size: 0.13rem
+			color: #4a4a4a
+
+	dl
+		margin-bottom: 0.1rem
+		padding: 0
+		display: block
+
+	.sku-type
+		overflow-y: auto
+		max-height: 1.3rem
+		margin-top: 0.13rem
+
+		dd
+			&.active
+				background: $primary-color
+				border: 1px solid $primary-color
+				color: #fff
+
+			&.sell-over
+				border: 1px solid #c7c7cd
+				color: $thirdary-font-color
+
+	dt
+		width: 100%
+		color: #4a4a4a
+		font-size: 0.13rem
+
+	dd
+		display: inline-block
+
+		+border-radius(0.02rem)
+
+		border: 1px solid #5c5c5c
+		padding: 0.03rem 0.15rem
+		font-size: 0.12rem
+		margin-right: 0.04rem
+		margin-top: 0.07rem
+
+	.add-cart
+		+box
+
+		position: relative
+		height: 0.36rem
+
+		.price
+			+box-flex
+
+			position: absolute
+			left: 0
+			bottom: 0
+			font-size: 0.15rem
+			color: $primary-color
+
+			&:first-letter
+				font-size: 0.12rem
+
+		del
+			font-size: 0.12rem
+			color: $thirdary-font-color
+
+		.btn
+			+border-radius
+
+			position: absolute
+			right: 0
+			bottom: 0
+			color: #fff
+			text-align: center
+			background: $primary-color
+			width: 1.12rem
+			height: 0.36rem
+			line-height: 0.36rem
+
+.cate-goods-r
+	margin-left: 0.64rem
+	padding-top: 0.48rem
+
+	h2
+		background: #fff
+		height: 0.32rem
+		line-height: 0.32rem
+		text-indent: 0.04rem
+		font-size: 0.14rem
+		color: $secondary-color
+		border-bottom: $border-default
+		width: 100%
+		border-radius: 0.02rem 0.02rem 0 0
+		position: relative
+		overflow: hidden
+
+		a.goods-list-button
+			position: absolute
+			right: 0
+			top: 0
+			width: 1rem
+			text-align: right
+			font-size: 0.18rem
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+			-webkit-tap-highlight-color: transparent
+
+			i
+				display: inline-block
+				width: 0.33rem
+				line-height: 0.33rem
+				font-size: 0.13rem
+				text-align: center
+
+				&.icon-lists
+					display: none
+
+				&.icon-card
+					display: inline-block
+
+			&.active
+				i
+					&.icon-lists
+						display: inline-block
+
+					&.icon-card
+						display: none
+
+	.goods-item
+		position: relative
+
+	.goods-list-list
+		margin-bottom: 0.064rem
+		background: $primary-background-color
+		border-radius: 0.02rem
+		position: relative
+		overflow: hidden
+
+		.goods-item
+			width: 100%
+
+			.sub-title
+				color: #b2b2b2
+				font-size: 0.12rem
+				width: 100%
+
+				+ellipsis(2)
+
+				height: 0.17rem
+				line-height: 0.17rem
+				-webkit-line-clamp: 1
+
+	.goods-list-block
+		margin-bottom: 0.02rem
+		background: $primary-background-color
+
+		.goods-item
+			margin-bottom: 0.01rem
+			background-color: #fff
+
+			.sub-title
+				display: none
+
+	.goods-list-wrapper
+		width: 100%
+		margin-bottom: 0
+		border-radius: 0 0 0.02rem 0.02rem
+		position: relative
+		overflow: hidden
+
+		+flex-box
+
+		+justify-between
+
+		-webkit-flex-wrap: wrap
+		flex-wrap: wrap
+
+	.hot-list
+		border-radius: 0.02rem
+		position: relative
+		overflow: hidden
+		border-radius: 0 0 0.02rem 0.02rem
+
+		ul
+			margin-left: -0.11rem
+			margin-right: -0.11rem
+			margin-bottom: 0.04rem
+			background-color: #fff
+
+			li
+				float: left
+				width: 33.33%
+				text-align: center
+
+				a
+					display: block
+					margin: 0.1rem 0.11rem 0
+
+				img
+					display: block
+					max-width: 100%
+					max-height: 100%
+					opacity: 0
+					transition: 0.3s ease-in opacity
+
+					&.loaded
+						opacity: 1
+
+				p
+					height: 0.24rem
+					font-size: 0.11rem
+					line-height: 0.12rem
+					padding-top: 0.02rem
+					color: $secondary-color
+
+@media screen and (min-device-width: 360px)
+	.cate-goods-r
+		margin-left: 0.9rem
+
+		.goods-list-block .goods-item
+			margin-bottom: 0.01rem
+
+	.cate-goods
+		.goods-nav
+			width: 0.9rem
+
+			a
+				height: 0.5rem
+
+				div
+					font-size: 0.14rem
+					height: 0.3rem
+					line-height: 0.38rem
+
+		.goods-qty
+			.goods-qty-item
+				left: 0.32rem
+
+				.num-ipt
+					font-size: 0.14rem
+					line-height: 3
+
+			.btn
+				padding: 0.1rem
+
+				span
+					width: 0.19rem
+					height: 0.19rem
+					line-height: 0.19rem

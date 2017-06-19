@@ -1,0 +1,192 @@
+.activity-list
+    padding-bottom: 0.05rem
+
+    .goods-list-block
+        .goods-item
+            width: calc(50% - 0.06rem)
+            margin-right: 0.04rem
+            margin-bottom: 0.05rem
+            position: relative
+
+            &:nth-child(2n-1)
+                margin-left: 0.04rem
+                margin-right: 0
+
+            .title
+                padding-top: 0.04rem
+                line-height: 0.18rem
+
+            .thumb-box
+                width: 100%
+
+                .thumb
+                    width: 100%
+
+                    img
+                        width: 100%
+
+            .import-price
+                font-size: 0.2rem
+                color: #fa3f00
+
+                &::first-letter
+                    font-size: 0.14rem
+
+                em
+                    font-size: 0.12rem
+
+            .content
+                padding: 0 0.04rem
+
+                h4
+                    display: none
+
+                h3
+                    color: $secondary-color
+                    font-size: 0.12rem
+                    height: auto
+                    padding: 0
+
+            .goods-quick-cart
+                display: block
+                right: 0.06rem
+
+                span
+                    width: 0.26rem
+                    height: 0.26rem
+                    line-height: 0.26rem
+
+                    i
+                        font-size: 0.15rem
+
+            .bgimg
+                width: 100%
+
+                img
+                    width: 100%
+                    display: block
+
+            &.goods-activity-link
+                .bgimg
+                    position: relative
+                    width: 100%
+                    height: 100%
+
+                    img
+                        display: block
+                        width: 100%
+                        height: 100%
+                        max-height: 0.12rem
+
+                h3
+                    position: absolute
+
+            &.goods-only-item
+                background: #fff
+                padding-bottom: 0.1rem
+
+                del
+                    display: inline
+                    font-size: 0.12rem
+                    color: #898989
+
+                    i
+                        display: inline
+
+            &.goods-item-sp
+                margin: 0 0.04rem
+                margin-bottom: 0.01rem
+                width: 100%
+                align-items: flex-start
+                -webkit-flex-direction: row
+                flex-direction: row
+
+                &.nomargin
+                    margin: 0
+
+                &:last-of-type
+                    margin-bottom: 0.05rem
+
+                .thumb-box
+                    width: auto
+
+                    .thumb
+                        width: 1.1rem
+
+                    .thumb img
+                        height: 100%
+                        width: 100%
+
+                .content
+                    width: auto
+                    height: 100%
+                    -webkit-flex: 1
+                    flex: 1
+                    padding-left: 0.08rem
+                    padding-right: 0rem
+                    position: relative
+
+                    h3
+                        font-size: 14px
+                        color: #010101
+                        margin-top: 0.16rem
+
+                    h4
+                        display: block
+                        font-size: 0.09rem
+                        color: #9d9d9d
+
+                    del
+                        display: none
+
+    .activity-back
+        display: block
+        text-align: center
+        line-height: 0.44rem
+        font-size: 0.15rem
+        color: #ffaf00
+        position: relative
+        background: #fff
+        margin: 0 0.04rem
+
+        &:after
+            content: ""
+            position: absolute
+            width: 0.06rem
+            height: 0.06rem
+            border-left: 0.01rem solid #ffae00
+            border-bottom: 0.01rem solid #ffae00
+            transform: rotate(45deg)
+            top: 0.185rem
+            left: 50%
+            margin-left: -0.48rem
+
+        &:before
+            content: ""
+            position: absolute
+            width: 0.15rem
+            height: 0.15rem
+            border: 1px solid #ffaf00
+            border-radius: 50%
+            top: 0.14rem
+            left: 50%
+            margin-left: -0.55rem
+
+    .activity-block
+        +flex-box
+
+        width: 100%
+        justify-content: space-between
+        -webkit-flex-wrap: wrap
+        flex-wrap: wrap
+
+        &:first-of-type
+            .goods-item-sp
+                margin: 0
+
+.activity-list-banner
+    margin-bottom: 0.08rem
+
+    img
+        width: 100%
+        min-height: 0.1rem

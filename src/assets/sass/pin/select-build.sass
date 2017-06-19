@@ -1,0 +1,142 @@
+.build
+    padding-bottom: 0.84rem
+
+.header-img
+    max-height: 1.2rem
+    height: auto
+
+    img
+        width: 100%
+        height: 100%
+
+.search-box
+    background: #fff
+    border-bottom: $border-default
+
+    .search-input
+        padding: 0.14rem 0.08rem
+
+        .search-img
+            border-radius: 0.03rem 0 0 0.03rem
+            padding-right: 0.03rem
+            display: block
+            height: 0.27rem
+            line-height: 0.27rem
+            background: rgba(3, 3, 3, 0.09)
+            padding-left: 0.08rem
+
+        .search-pla
+            +box-flex
+
+            input
+                border: none
+                border-radius: 0 0.03rem 0.03rem 0
+                font-size: 0.14rem
+                color: #9b9b9b
+                width: 100%
+                height: 0.27rem
+                line-height: 0.27rem
+
+                +box-sizing(border-box)
+
+                background: rgba(3, 3, 3, 0.09)
+
+.search-result
+    background: #fff
+    display: none
+
+    .nosearch
+        display: none
+        font-size: 0.16rem
+        color: #9b9b9b
+        text-align: left
+        background: #fff
+        line-height: 0.44rem
+        border-top: $border-default
+        border-bottom: $border-default
+        padding-left: 0.08rem
+
+    a
+        font-size: 0.16rem
+        color: $secondary-color
+        text-align: left
+        height: 0.44rem
+        line-height: 0.44rem
+        border-bottom: $border-default
+        padding: 0 0.08rem
+
+        +box
+
+        span
+            +box-flex
+
+            text-align: right
+            display: block
+
+.nearby-build
+    background: #fff
+    display: none
+
+    .nearby-title
+        height: 0.4rem
+        background: $primary-background-color
+        line-height: 0.4rem
+
+        span
+            font-size: 0.16rem
+            color: #9b9b9b
+            text-align: left
+            display: block
+            padding-left: 0.08rem
+
+            +box-flex
+
+        .icon-dingwei
+            +box-flex
+
+            font-size: 0.17rem
+            text-align: right
+            padding-right: 0.08rem
+
+    a
+        display: block
+        font-size: 0.16rem
+        color: $secondary-color
+        text-align: left
+        height: 0.44rem
+        line-height: 0.44rem
+        border-bottom: $border-default
+        padding: 0 0.08rem
+
+.nobuilding
+    display: none
+    text-align: center
+    background: $primary-background-color
+    padding-top: 0.67rem
+
+    img
+        width: 0.88rem
+        vertical-align: middle
+        margin-bottom: 0.13rem
+
+    span
+        display: block
+        text-align: center
+        font-size: 0.16rem
+        color: #929292
+
+.bottom-btn
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    background: $primary-background-color
+
+    .prompt
+        font-size: 0.13rem
+        color: #9b9b9b
+        text-align: center
+        padding-bottom: 0.09rem
+
+    .options
+        padding: 0 0.23rem 0.08rem 0.23rem

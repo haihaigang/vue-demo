@@ -1,0 +1,146 @@
+.me-header
+    display: block
+    width: 100%
+    padding: 0.24rem 0
+    text-align: center
+    background-color: #fff
+
+    .me-header-content
+        height: 0.58rem
+        width: 0.58rem
+        margin: 0 auto
+        padding: 0.04rem
+        background-color: #fff
+        box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1)
+
+        +border-radius(100%)
+
+        img
+            display: block
+            max-width: 100%
+            max-height: 100%
+
+            +border-radius(100%)
+
+    span
+        text-align: center
+        display: block
+        font-size: 0.18rem
+        color: #fff
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5)
+
+.me-bar
+    margin-bottom: 0.08rem
+    background: #fff
+
+.me-bar-title
+    position: relative
+    display: flex
+    height: 0.41rem
+    line-height: 0.41rem
+
+    &:after
+        content: ""
+        position: absolute
+        left: 0.08rem
+        right: 0.08rem
+        bottom: 0
+        height: 1px
+        line-height: 1px
+        background-color: $primary-background-color
+
+    .me-bar-title-name
+        font-size: 0.17rem
+        color: #000
+        margin-left: 0.15rem
+        flex: 1
+
+    .me-bar-title-opt
+        width: 0.18rem
+        margin-right: 0.08rem
+        color: $secondary-font-color
+
+.me-bar-content
+    color: $secondary-font-color
+
+    .me-bar-content-tiem
+        position: relative
+        display: block
+        float: left
+        width: 25%
+        padding: 0.18rem 0 0.14rem 0
+        text-align: center
+        vertical-align: middle
+
+        .iconfont
+            position: relative
+            line-height: 0.24rem
+            font-size: 0.24rem
+            padding-top: 0
+            margin-bottom: 0.08rem
+
+        .tab-label
+            font-size: 0.11rem
+            line-height: 0.16rem
+
+        .badge
+            display: block
+            position: absolute
+            top: -0.08rem
+            right: 45%
+            z-index: 100
+            text-align: center
+            height: 0.16rem
+            min-width: 0.16rem
+            padding: 0
+            font-size: 0.09rem
+            line-height: 0.16rem
+            color: white
+            vertical-align: top
+            background: $primary-color
+            margin-right: -25px
+            border: 2px solid #fff
+
+.badge
+    display: inline-block
+    font-size: 13px
+    line-height: 16px
+    border-radius: 0.5rem
+
+.me-list
+    margin-bottom: 0.08rem
+    background-color: #fff
+
+.me-list-item
+    position: relative
+    display: flex
+    height: 0.44rem
+    line-height: 0.44rem
+
+    &:after
+        content: " "
+        position: absolute
+        left: 0.08rem
+        right: 0.08rem
+        bottom: 0
+        height: 1px
+        line-height: 1px
+        background-color: $primary-background-color
+
+    &:last-child:after
+        display: none
+
+    .me-list-item-icon
+        width: 0.29rem
+        text-align: center
+        margin: 0 0.15rem
+        color: $thirdary-font-color
+
+    .me-list-item-content
+        flex: 1
+        font-size: 0.17rem
+
+    .mei-list-item-opt
+        width: 0.18rem
+        margin-right: 0.08rem
+        color: $secondary-font-color

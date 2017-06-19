@@ -1,0 +1,158 @@
+.activity-newyear-main 
+    padding-bottom: 0
+    width: 100%
+    height: 100%
+    position: relative
+    z-index: 0
+    background: url('../images/activity/new-year/img_bg.jpg') repeat
+    background-size: 100% 100%
+    overflow-x: hidden
+
+
+.activity-newyear-content
+    width: 3rem
+    margin: 0 auto
+
+.activity-newyear-box
+    position: relative
+    z-index: 1
+    text-align: center
+
+
+.activity-newyear-center 
+    vertical-align: middle
+    display: inline-block
+
+
+.activity-mask
+    display: none
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,.5)
+    position: fixed
+    z-index: 3
+
+
+.activity-newyear-pop
+    @include flex-box
+    @include flex-column
+    display: none
+    top: 7%
+    left: 13%
+    position: fixed
+    width: 74%
+    height: 78%
+    background-color: #e2ba75
+    z-index: 5
+
+.activity-newyear-pop-bor
+    @include flex-box
+    @include justify-center
+    height: .2rem
+
+    span
+        display: inline-block
+
+
+.activity-newyear-c
+    width: .2rem
+    background: url('../images/activity/new-year/Combined_Shape.png') no-repeat
+    background-size: 100% 100%
+    background-position: .01rem .01rem
+
+.activity-newyear-m,
+.activity-newyear-pop-mid
+    -webkit-flex: 1
+    flex: 1
+    
+.activity-newyear-pop-top
+    .activity-newyear-m
+        border-top: solid .01rem #bf8033
+        margin-top: .01rem
+
+.activity-newyear-pop-bot
+    .activity-newyear-m
+        border-bottom: solid .01rem #bf8033
+        margin-bottom: .01rem
+
+.activity-newyear-t-r
+    transform: rotateY(180deg)
+
+.activity-newyear-b-l
+    transform: rotateX(180deg)
+
+.activity-newyear-b-r
+    transform: rotateX(180deg) rotateY(180deg)
+
+.activity-newyear-pop-mid
+    @include box-sizing(border-box)
+    margin: 0 .01rem
+    border-left: solid .01rem #bf8033
+    border-right: solid .01rem #bf8033
+    -webkit-overflow-scrolling: touch
+    overflow-y: auto
+
+
+.activity-group-list
+    padding: 0 .18rem
+
+    li
+        p
+            display: inline-block
+            line-height: 2.6
+            padding-left: .28rem
+            background: url('../images/activity/new-year/Path_2.png') center left no-repeat
+            background-size: .23rem .14rem
+            width: 75%
+
+
+.activity-close-btn
+    position: absolute
+    width: .3rem
+    height: .3rem
+    bottom: -.54rem
+    left: 50%
+    margin-left: -.15rem
+    background: url('../images/activity/new-year/Group_5.png') no-repeat
+    background-size: 100% 100%
+
+
+
+.activity-newyear-select
+    margin: .14rem 0 .2rem 0
+    width: 2.33rem
+    height: .43rem
+    line-height: .43rem
+    background: url('../images/activity/new-year/img_notselectName.png') no-repeat
+    background-size: 100% 100%
+    display: inline-block
+    text-align: left
+    
+    p
+        font-size: .13rem
+        padding: 0 .14rem
+        display: inline-block
+
+    img
+        height: .08rem
+        float: right
+        margin: .18rem
+
+.activity-newyear-abs
+    height: .34rem
+    position: absolute
+    z-index: 0
+
+
+.activity-getCoupon 
+    top: 4.9rem
+    left: 1.2rem
+    position: absolute
+    width: 1.26rem
+    height: .5rem
+    display: block
+    z-index: 2
+
+

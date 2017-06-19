@@ -1,0 +1,107 @@
+.cycle-detail
+    position: relative
+    z-index: 0
+    padding-bottom: 0.48rem
+
+    img
+        width: 100%
+        display: block
+
+.cycle-footer
+    position: fixed
+    width: 100%
+    left: 0
+    bottom: 0
+    background: #fff
+    box-shadow: 0px 0 12px rgba(0, 0, 0, 0.39)
+
+    +flex-box
+
+    height: 0.48rem
+    z-index: 1
+
+    .cycle-footer-share
+        display: block
+        width: 0.48rem
+        height: 0.48rem
+        border-right: $border-default
+        text-align: center
+        line-height: 0.48rem
+        color: $primary-color
+
+        i.iconfont
+            font-size: 0.2rem
+
+    .cycle-footer-select
+        width: 187px
+        text-align: center
+
+        a
+            border: 1px solid #e3e3e3
+            line-height: 0.28rem
+            display: block
+            margin: 0 0.16rem
+            margin-top: 0.09rem
+            font-size: 0.2rem
+            color: $primary-color
+            border-radius: 0.03rem
+            position: relative
+            height: 0.28rem
+            overflow: hidden
+
+            &:after
+                content: ""
+                position: absolute
+                right: 0.06rem
+                top: 0.06rem
+                width: 0.08rem
+                height: 0.08rem
+                border-right: 0.02rem solid $primary-color
+                border-bottom: 0.02rem solid $primary-color
+                transform: rotate(45deg)
+                -webkit-transform: rotate(45deg)
+                -moz-transform: rotate(45deg)
+                -ms-transform: rotate(45deg)
+                -o-transform: rotate(45deg)
+                transition: 0.2s
+
+            &.active
+                &:after
+                    top: 0.09rem
+                    transform: rotate(225deg)
+                    -webkit-transform: rotate(225deg)
+                    -moz-transform: rotate(225deg)
+                    -ms-transform: rotate(225deg)
+                    -o-transform: rotate(225deg)
+
+    a.cycle-buy
+        display: block
+        -webkit-flex: 1
+        flex: 1
+        background: $primary-color
+        text-align: center
+        line-height: 0.48rem
+        font-size: 0.17rem
+        color: #ffffff
+
+    .cycle-footer-option
+        position: absolute
+        width: 1.55rem
+        left: 0.65rem
+        bottom: 0.45rem
+        background: #fff
+        box-shadow: 0 0 0.05rem rgba(0, 0, 0, 0.27)
+        border-radius: 0.03rem
+        text-align: center
+        display: none
+
+        a
+            display: block
+            line-height: 40px
+            border-bottom: $border-default
+            font-size: 0.17rem
+            color: $secondary-color
+            text-align: center
+
+        &:last-of-type
+            border: 0

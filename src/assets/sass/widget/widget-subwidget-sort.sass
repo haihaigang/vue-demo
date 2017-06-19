@@ -1,0 +1,142 @@
+.subwidget-sort
+    position: relative
+    z-index: 9
+
+    &.active
+        .subwidget-sort-inner
+            position: absolute
+            width: 100%
+            left: 0
+
+    &.fix
+        top: 0
+        position: fixed
+        width: 100%
+        z-index: 100
+        left: 0
+        background: #fff
+
+    .subwidget-sort-bar-fix
+        height: 0.4rem
+
+    .subwidget-sort-bar
+        +flex-box
+
+        height: 0.4rem
+        line-height: 0.4rem
+        background-color: #fff
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.07)
+
+        a
+            display: block
+            width: 33.33%
+            text-align: center
+            font-size: 0.14rem
+            color: $secondary-color
+
+            &.disable
+                opacity: 0.5
+
+            &.sp
+                position: absolute
+                right: 0
+                top: 0
+                width: 0.75rem
+
+            &.active
+                color: $primary-color
+
+            i
+                font-size: 0.13rem
+                padding-right: 0.05rem
+
+        em
+            display: block
+            width: 33.33%
+            text-align: center
+            font-size: 0.14rem
+            color: $secondary-color
+
+    .subwidget-sort-key
+        background: $primary-background-color
+        padding: 0.08rem
+        position: relative
+        margin-right: 0.4rem
+        display: none
+
+        .subwidget-sort-key-inner
+            position: relative
+            margin-right: 0.18rem
+            height: 0.4rem
+            overflow: hidden
+
+        .subwidget-sort-key-wrapper
+            overflow: hidden
+            width: 100%
+            height: 100%
+            position: relative
+
+        span
+            display: block
+            line-height: 0.4rem
+            background: #fefefe
+            padding: 0 0.08rem
+            margin-right: 0.08rem
+            border-radius: 2px
+            font-size: 0.15rem
+            color: $secondary-font-color
+            float: left
+            box-sizing: border-box
+
+            a
+                display: inline-block
+                width: 0.18rem
+                height: 0.18rem
+                font-size: 0.11rem
+                vertical-align: middle
+                line-height: 0.17rem
+                background: #909090
+                border-radius: 50%
+                text-align: center
+                margin-left: 0.08rem
+                position: relative
+                top: -1px
+
+                i
+                    font-size: 0.08rem
+                    color: #fefefe
+
+        a.clear
+            position: absolute
+            right: -0.4rem
+            top: 0
+            width: 0.48rem
+            line-height: 0.56rem
+            font-size: 0.16rem
+            color: $secondary-font-color
+            text-align: center
+
+    .subwidget-sort-select
+        position: absolute
+        width: 100%
+        left: 0
+        background: #fefefe
+        top: 0.4rem
+        padding: 0 0.08rem
+        box-sizing: border-box
+        line-height: 0.4rem
+        display: none
+
+        li
+            border-bottom: 1px solid #EFEFEF
+
+            &:last-of-type
+                border: 0
+
+            a
+                display: block
+                font-size: 0.14rem
+                color: $secondary-color
+
+                &.subwidget-sort-3
+                    display: none

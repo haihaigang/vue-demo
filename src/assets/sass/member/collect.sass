@@ -1,0 +1,128 @@
+.collect
+    .order-list
+        display: block
+        margin-top: 0
+        margin-bottom: 0.08rem
+
+    .order-item
+        background-color: #fff
+
+        &:last-child
+            border-bottom: none
+
+.collect .item-col-box
+    position: relative
+
+    +box
+
+.collect .item-col-flex
+    +box-flex
+
+    overflow: hidden
+
+a.btn-grey
+    position: absolute
+    font-size: 14px
+    right: 0
+    bottom: 0.17rem
+    height: 0.35rem
+    line-height: 0.35rem
+    width: 0.54rem
+    text-align: center
+    color: #fff
+    border: 1px solid #717171
+    background: rgba(0, 0, 0, 0.5)
+
+    +border-radius(0.04rem, 0, 0, 0.04rem, 0.04rem)
+
+.time-tabs-item:last-child .order-list .order-item:last-child
+    border-bottom: 2px solid #efefef
+
+.sub-tab
+    display: block
+    height: 0.44rem
+    line-height: 0.44rem
+    overflow: hidden
+    background-color: #fff
+    padding-right: 0.08rem
+    font-size: 15px
+
+.icon-sub-tab
+    padding-left: 0.14rem
+    border-left: 6px solid $primary-color
+
+.sub-tab
+    label
+        display: block
+        float: left
+        color: #4A4A4A
+
+    span
+        display: block
+        float: right
+        color: $thirdary-font-color
+
+.item-img
+    display: block
+    width: 76px
+    height: 76px
+    margin-right: 0.08rem
+    overflow: hidden
+
+    +box-pack(center)
+
+    +box-align
+
+    background: #fff
+
+    img
+        display: block
+        width: 100%
+        max-width: 100%
+        border: 0
+
+.item-bder
+    position: relative
+    border-bottom: 2px solid #f6f6f6
+    padding: 0.12rem 0.08rem 0.11rem 0.08rem
+
+    &.flow
+        background: #fff
+        margin-bottom: 8px
+
+        .item-img
+            border: $border-default
+
+.item-info
+    +box
+
+    .title
+        padding-top: 2px
+        font-size: 13px
+        color: #4a4a4a
+
+    .sign-txt
+        font-size: 13px
+        color: #c7c7c7
+
+    .icon-del
+        display: block
+        font-size: 0.23rem
+        margin-top: -10px
+        color: #aaa
+        padding: 0 0.15rem
+
+.item-pay span
+    display: block
+    float: left
+    color: $primary-color
+    font-size: 13px
+    padding-top: 23px
+
+.nodata.nocollect-pic
+    display: block
+    padding-top: 1.6rem
+    width: 1.1rem
+    margin: 0.2rem auto
+    background: url(../images/member/icon_shoucang.png) no-repeat center center
+    background-size: 100% auto

@@ -1,0 +1,1018 @@
+.pin-info li
+    &.disabled em, &.btn-buy.disabled em
+        background-color: #d2d2d2
+
+    &.disabled div
+        background-color: #a7a7a7
+
+.group-join
+    padding-bottom: 0
+    margin: 0 0 0.08rem 0
+
+    +border-radius(0)
+
+    .sus
+        display: block
+        position: absolute
+        right: 0.08rem
+        top: auto
+        bottom: -0.27rem
+        width: 0.87rem
+        height: 0.87rem
+        background-image: url(../images/common/groupsuccess.png)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 100% auto
+        z-index: 5
+
+
+.group-img .join-num
+    position: absolute
+    top: 0
+    left: 0.08rem
+    color: #fff
+    width: 0.35rem
+    padding: 0.05rem 0
+    font-size: 1.5em
+    text-align: center
+    background-color: #f83975
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+
+    .s
+        font-size: 0.57em
+
+
+
+.adv-list
+    width: 100%
+    height: auto
+    margin-bottom: 0.08rem
+    font-size: 0
+
+    img
+        width: 100%
+        margin-bottom: 0.01rem
+
+.group-con
+    background-color: #fff
+    overflow: hidden
+    margin-top: 0.08rem
+    margin-bottom: 0.08rem
+
+    img
+        display: block
+        width: 100%
+
+.more-pingroup
+    width: 100%
+    height: auto
+
+    .title
+        background: #ffffff
+        height: 0.4rem
+        line-height: 0.4rem
+        font-size: 0.15rem
+        margin-bottom: 0.08rem
+
+.app-goods-list
+    div
+        .imgbox
+            height: 183px
+            padding: 0
+            margin-right: 0
+
+            +box
+
+            +box-align
+
+            -webkit-box-orient: horizontal
+
+            +box-pack
+
+        &.parent-imgbox
+            padding: 0 0 0.04rem 0
+            margin-right: 0.04rem
+
+            dl, strong
+                padding: 0 0.08rem
+
+            dl > p
+                bottom: 0.05rem
+
+    &:nth-child(2n) div.parent-imgbox
+        margin-right: 0
+
+    strong
+        font-size: 0.13rem
+
+    div
+        position: relative
+
+        > img
+            width: 100%
+
+        &.parent-imgbox .imgbox img
+            width: 100%
+            max-width: 183px
+
+    p
+        background: $primary-color
+
+        +border-radius(0, 0.04rem, 0, 0, 0.04rem)
+
+        width: 0.63rem
+        height: 0.23rem
+        font-size: 0.14rem
+        color: #fff
+        text-align: center
+        line-height: 0.23rem
+        position: absolute
+        right: 0
+        bottom: 0.08rem
+
+.dialog-con
+    position: fixed
+    right: 0
+    top: 0
+    right: 0.15rem
+    z-index: 120
+    display: none
+    color: #fff
+    text-align: right
+
+    img
+        max-width: 90%
+
+.group-list
+    position: relative
+    display: block
+    margin-bottom: 0.1rem
+    text-decoration: none
+
+.group-join
+    padding-bottom: 0
+    margin: 0 0 0.08rem 0
+
+    +border-radius(0)
+
+
+
+.group-stat
+    +box
+
+    padding-top: 0.14rem
+    font-size: 0.8em
+    color: $secondary-font-color
+
+    .text
+        +box-flex
+
+        color: $primary-color
+        text-align: center
+
+.group-join-status
+    width: 100%
+
+
+.my-group-item
+    display: block
+    margin-bottom: 0.08rem
+    background-color: #fff
+
+.my-group-content
+    +box
+
+    padding: 0.08rem
+
+    .thumb
+        position: relative
+        width: 1.12rem
+        height: 0.69rem
+
+        +box
+
+        +box-align
+
+        margin-right: 0.08rem
+
+        +box-shadow(0 2px 4px rgba(0, 0, 0, 0.11))
+
+        img
+            display: block
+            max-width: 100%
+            max-height: 100%
+            margin: 0 auto
+
+            +border-radius
+
+        .join-num
+            position: absolute
+            top: 0
+            left: 0.08rem
+            color: #fff
+            width: 0.3rem
+            padding: 0.02rem 0
+            text-align: center
+            background-color: #f83975
+
+            +box-shadow(0 2px 4px rgba(0, 0, 0, 0.3))
+
+.group-list .num
+    position: absolute
+    left: 0
+    top: 0
+    width: 0.56rem
+    height: 0.56rem
+    color: #fd8cab
+    background-color: rgba(255, 255, 255, 0.4)
+    text-align: center
+    border-bottom-right-radius: 5px
+
+    i
+        display: block
+        width: 100%
+        height: 0.38rem
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: auto 0.25rem
+
+    &.n3
+        color: #f24d7f
+
+.group-join-user li
+    padding-top: 0.08rem
+    text-align: center
+
+    div
+        position: relative
+        width: 0.5rem
+        height: 0.5rem
+        margin: 0 auto
+
+        +border-radius(100%)
+
+        border: 1px solid #fff
+
+    img
+        display: block
+        width: 0.5rem
+        height: 0.5rem
+
+        +border-radius(100%)
+
+    .idx0
+        border-color: $primary-color
+
+    .idx1
+        border-color: #F5A623
+
+    .empty
+        border-color: #fff
+
+    float: left
+    width: 20%
+    padding-top: 0.08rem
+    text-align: center
+
+    div
+        position: relative
+        width: 0.5rem
+        height: 0.5rem
+        margin: 0 auto
+
+        +border-radius(100%)
+
+        border: 1px solid #fff
+
+    img
+        display: block
+        width: 0.5rem
+        height: 0.5rem
+
+        +border-radius(100%)
+
+    .idx0
+        border-color: $primary-color
+
+    .idx1
+        border-color: #F5A623
+
+    .empty
+        border-color: #fff
+
+.group-join-status
+    width: 100%
+
+    .group-count-down
+        padding-bottom: 0.08rem
+
+    .status
+        padding: 0.08rem 0
+        line-height: 0.18rem
+        font-size: 0.9em
+        text-align: center
+        height: 0.18rem
+
+        em
+            padding: 0 2px
+            color: $primary-color
+
+
+
+.fixed
+    > *
+        position: fixed
+        z-index: 5
+        top: 0
+        left: 0
+        right: 0
+        color: #fff
+        padding: 0.08rem
+        background: rgba(0, 0, 0, 0.33)
+
+    .pin-detail-btn
+        dl
+            font-size: 1em
+
+        dd
+            color: #fff
+
+    .group-content
+        padding: 0
+
+#fixed-pin-down
+    width: 100%
+    background-color: #fff
+
+    > *
+        padding: 0.11rem 0 0.16rem
+
+    &.fixed > *
+        position: fixed
+        padding: 0.08rem 0
+
+#fixed-pin-price.fixed
+    dd
+        color: #fff
+
+    .price
+        font-weight: bold
+
+.fixed .sus
+    color: #fff
+    background-color: $primary-color
+    display: inline-block
+    padding: 2px 4px
+
+    +border-radius(0.05rem)
+
+.group-user-list
+    position: relative
+    margin-top: 0.08rem
+    font-size: 0.8em
+
+    &:before
+        content: ""
+        position: absolute
+        left: 50%
+        top: -0.04rem
+        width: 0.16rem
+        height: 0.16rem
+        margin-left: -0.08rem
+        background-color: $primary-color
+
+        +transform(rotate(45deg))
+
+.group-user-item
+    position: relative
+
+    +box
+
+    height: 0.4rem
+    margin-bottom: 0.08rem
+    padding: 0.04rem 0.3rem 0.04rem 0.08rem
+    line-height: 0.4rem
+    background-color: #fff
+    overflow: hidden
+
+    .avatar
+        display: block
+        width: 0.4rem
+        height: 0.4rem
+
+        +border-radius(50%)
+
+    .name
+        padding-left: 0.08rem
+
+        +box-flex
+
+        +ellipsis
+
+        font-size: 0.13rem
+
+    .time
+        text-align: right
+
+    .user-list-goods
+        position: relative
+        padding: 0.03rem 0
+
+        +box-flex
+
+        .user-list-goods-item
+            position: absolute
+
+            +border-radius(0.17rem)
+
+            width: 0.34rem
+            height: 0.34rem
+            background-color: #ccc
+
+    &:first-child
+        background-color: $primary-color
+        color: #fff
+
+    &.last
+        color: #9b9b9b
+
+    &:after
+        position: absolute
+        right: -0.2rem
+        bottom: 0.04rem
+        height: 0.18rem
+        padding: 0 0.2rem
+        line-height: 0.18rem
+        font-size: 0.13rem
+        color: #fff
+        background-color: $primary-color
+        -webkit-transform: rotate(317deg)
+        transform-origin: 50% 50%
+
+    &.idx1:after
+        content: "沙发"
+
+.pin-join-user li
+    .idx0:before, .idx1:before
+        position: absolute
+        top: 4px
+        right: -10px
+        font-size: 8px
+        padding: 2px
+        color: #fff
+        background-color: $primary-color
+
+        +border-radius(0.1rem)
+
+        padding: 2px
+
+    .idx0:before
+        content: "团长"
+
+    .idx1:before
+        content: "沙发"
+        background-color: #F5A623
+
+    .empty:before
+        display: none
+
+.fixed .group-count-down span
+    color: #fff
+
+.back-top
+    color: $primary-color
+    position: fixed
+    bottom: 0.7rem
+    right: 0.15rem
+    display: none
+    width: 44px
+    height: 44px
+    -webkit-user-select: none
+    background-image: url(../images/common/icon_top.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100% auto
+
+    i
+        font-size: 0.2rem
+
+.group-user-list
+    position: relative
+    margin-top: 0.08rem
+    font-size: 0.8em
+
+    &:before
+        content: ""
+        position: absolute
+        left: 50%
+        top: -0.04rem
+        width: 0.16rem
+        height: 0.16rem
+        margin-left: -0.08rem
+        background-color: $primary-color
+
+        +transform(rotate(45deg))
+
+.group-user-item
+    position: relative
+
+    +box
+
+    height: 0.4rem
+    margin-bottom: 0.08rem
+    padding: 0.04rem 0.08rem
+    line-height: 0.4rem
+    background-color: #fff
+    overflow: hidden
+
+#sku-head
+    +box
+
+    width: 100%
+    box-sizing: border-box
+    border-bottom: 1px solid #e3e3e3
+    padding: 8px
+
+#sku-image
+    display: block
+    width: 70px
+    height: 70px
+
+    +border-radius(0.02rem)
+
+#sku-detail
+    margin-left: 8px
+    margin-right: 20px
+
+    +box-flex
+
+#sku-name
+    font-size: 12px
+    overflow: hidden
+    position: relative
+    color: #5c5c5c
+    height: 40px
+    margin-bottom: 6px
+    line-height: 20px
+    text-overflow: ellipsis
+
+    +box
+
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+
+#sku-price-depends
+    color: #ee4040
+    font-size: 16px
+    line-height: 1.5
+
+    em
+        font-size: 12px
+        font-style: normal
+
+#sku-msg
+    font-size: 12px
+    margin-left: 10px
+    text-decoration: line-through
+    color: #cbcbcb
+
+#sku-quit
+    position: absolute
+    z-index: 2
+    top: 0
+    right: 0
+    cursor: pointer
+    height: 30px
+    width: 30px
+    color: #cbcbcb
+    text-align: center
+
+#skus, #skusNum
+    padding-left: 8px
+    padding-right: 8px
+    padding-bottom: 8px
+    max-height: 210px
+    overflow-x: hidden
+    overflow-y: auto
+    font-size: 12px
+
+.sku-info
+    padding-top: 8px
+    border-bottom: 1px solid #e3e3e3
+
+    .sku-type
+        color: #5c5c5c
+
+    .goods
+        display: inline-block
+        padding: 5px 15px
+        margin: 8px 8px 8px 0
+        border: 1px solid #5c5c5c
+
+        +border-radius(0.02rem)
+
+        color: #5c5c5c
+        cursor: pointer
+        min-width: 60px
+        height: 30px
+        line-height: 18px
+        text-align: center
+        box-sizing: border-box
+
+    .checked
+        border: 1px solid $primary-color
+        color: #fff
+        background-color: $primary-color
+
+    .disabled
+        border: 1px solid #e3e3e3
+        color: #e3e3e3
+
+#sku-decide
+    width: 100%
+
+#sku-buy
+    display: block
+    font-weight: 700
+    color: #fff
+    background-color: $primary-color
+    height: 48px
+    line-height: 48px
+    text-align: center
+    vertical-align: middle
+    position: relative
+
+.sku-num
+    +box
+
+    dl
+        +box
+
+    padding: 0 0 0.08rem 0
+
+    span, dl dd
+        +box-flex
+
+    span
+        display: block
+        line-height: 0.3rem
+
+    dl
+        width: 1.04rem
+        border: 1px solid #E3E3E3
+
+        +border-radius(0.03rem)
+
+        height: 0.3rem
+        text-align: center
+        line-height: 0.3rem
+        color: $thirdary-font-color
+
+        dt
+            width: 0.4rem
+
+            span
+                width: 100%
+                height: 0.3rem
+                border: none
+                border-left: 1px solid #e3e3e3
+                border-right: 1px solid #e3e3e3
+                outline: none
+                float: left
+                text-align: center
+                font-size: 0.2rem
+                color: $primary-color
+                background: #fff
+
+        dd
+            font-size: 0.15rem
+            color: $primary-color
+
+            &:first-of-type
+                color: $thirdary-font-color
+
+.share-alert-hide
+    -webkit-animation: hide 1s ease-in
+    -moz-animation: hide 1s ease-in
+    animation: hide 1s ease-in
+    -o-animation: hide 1s ease-in
+    -ms-animation: hide 1s ease-in
+    transition-delay: 0s
+
+@keyframes hide
+    0%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@-webkit-keyframes hide
+    0%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@-moz-keyframes hide
+    0%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@-o-keyframes hide
+    0%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@-ms-keyframes hide
+    0%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@keyframes shaking
+    0%
+        right: 20px
+
+    25%
+        right: 15px
+
+    50%
+        right: 20px
+
+    75%
+        right: 25px
+
+    100%
+        right: 20px
+
+@-webkit-keyframes shaking
+    0%
+        right: 20px
+
+    25%
+        right: 15px
+
+    50%
+        right: 20px
+
+    75%
+        right: 25px
+
+    100%
+        right: 20px
+
+@-moz-keyframes shaking
+    0%
+        right: 20px
+
+    25%
+        right: 15px
+
+    50%
+        right: 20px
+
+    75%
+        right: 25px
+
+    100%
+        right: 20px
+
+@-o-keyframes shaking
+    0%
+        right: 20px
+
+    25%
+        right: 15px
+
+    50%
+        right: 20px
+
+    75%
+        right: 25px
+
+    100%
+        right: 20px
+
+@-ms-keyframes shaking
+    0%
+        right: 20px
+
+    25%
+        right: 15px
+
+    50%
+        right: 20px
+
+    75%
+        right: 25px
+
+    100%
+        right: 20px
+
+.group-img .slideBox
+    position: static
+
+.pin-info
+    dd:last-of-type
+        margin-right: 0
+
+    .paytip
+        padding-bottom: 0.08rem
+        color: $primary-color
+        font-size: 0.13rem
+
+    ul
+        +box
+
+        padding-top: 0.08rem
+
+    li
+        +box-flex
+
+        margin: 0 0.05rem 0 0
+        color: #fff
+        background: $primary-color
+
+        +border-radius(0.02rem)
+
+        width: 50%
+
+        &:last-of-type
+            background: #b14844
+            margin: 0 0 0 0.05rem
+
+        div
+            height: 0.25rem
+            line-height: 0.25rem
+            font-size: 0.13rem
+            text-align: center
+            background-color: $secondary-color
+
+            +border-radius(0, 0, 0.02rem, 0.02rem)
+
+        em
+            height: 0.35rem
+            line-height: 0.35rem
+            font-size: 0.2rem
+            display: block
+            text-align: center
+            background: $primary-color
+
+            +border-radius(0.02rem, 0.02rem, 0, 0)
+
+        &.btn-buy em
+            background: #c1854d
+
+    .mutiple li em
+        font-size: 0.17rem
+
+.grouprule .title span
+    float: right
+
+footer .footer-buttons .pin-footer
+    +border-radius(0.24rem)
+
+.pin-success
+    height: 0.4rem
+    margin-bottom: 0.08rem
+    padding: 0.08rem
+    background: #fff
+    text-align: center
+
+    img
+        width: 0.24rem
+        height: 0.24rem
+
+        +border-radius(0.24rem)
+
+        margin-bottom: -0.07rem
+        margin-right: 0.08rem
+
+    strong
+        display: block
+        font-size: 0.15rem
+        font-weight: normal
+        line-height: 0.21rem
+        color: $primary-color
+
+    &.single strong
+        line-height: 0.4rem
+
+    span
+        display: block
+        padding-top: 0.05rem
+        font-size: 0.1rem
+        line-height: 0.14rem
+        color: #000
+
+    &.single span
+        display: none
+
+.pin-payment
+    background: $primary-color
+    height: 0.44rem
+    font-size: 0.14rem
+    color: #FFFFFF
+    line-height: 0.46rem
+    padding-left: 0.08rem
+    margin-top: -0.08rem
+    text-align: left
+
+    i
+        font-style: normal
+        display: block
+
+        +box-flex
+
+    span
+        display: block
+        text-align: right
+        margin-right: 0.08rem
+
+        +box-flex
+
+.pin-join-user
+    dl
+        +box
+
+    dt
+        width: 0.77rem
+
+    dd
+        +box-flex
+
+    dt img
+        width: 0.73rem
+        height: 0.73rem
+
+        +border-radius(100%)
+
+        border: 0.02rem solid #f99e3c
+
+    dd
+        color: $primary-color
+        font-size: 0.15rem
+        line-height: 0.77rem
+        text-indent: 0.15rem
+        text-align: left
+
+    .winner
+        opacity: 0.6
+
+
+.pin-share
+    top: 0
+    bottom: 0
+    left: 0
+    color: #fff
+
+.pin-share-tip
+    position: absolute
+    top: 0
+    right: 20px
+    padding-top: 99px
+    padding-right: 65px
+    background-image: url(../images/common/jiantou.png)
+    background-repeat: no-repeat
+    background-position: top right
+    background-size: auto 110px
+
+    &.shaking
+        -webkit-animation: shaking 200ms ease-in infinite
+        -moz-animation: shaking 200ms ease-in infinite
+        -ms-animation: shaking 200ms ease-in infinite
+        -o-animation: shaking 200ms ease-in infinite
+        animation: shaking 200ms ease-in infinite
+        transition-delay: 0s
+
+.group-share.pin-share
+    .pin-share-content
+        position: absolute
+        top: 40%
+        width: 100%
+        text-align: center
+
+    .pin-share-title
+        font-size: 15px
+
+    .pin-share-desc
+        font-size: 24px    
+
+.pin-share-button
+    display: block
+    width: 168px
+    height: 48px
+    margin: 0 auto 0.24rem auto
+    line-height: 48px
+    font-size: 1.2em
+    border: 1px solid #FFFFFF
+
+    +border-radius
+
+    background-color: rgba(0, 0, 0, 0)
+

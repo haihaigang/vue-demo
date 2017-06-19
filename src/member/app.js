@@ -1,3 +1,5 @@
+import '../assets/sass/rby.scss';
+
 // import 'babel-polyfill'
 import Vue from 'vue'
 import App from './components/App.vue'

@@ -1,0 +1,394 @@
+.home-banner
+    text-align: center
+
+    img
+        display: block
+
+.group-list .not-started
+    bottom: 0.07rem
+
+.home
+    .swiper-nav
+        width: 100%
+        height: 0.72rem
+        margin: 0
+
+        > .swiper-wrapper
+            margin: 0 0 0.1rem 0
+            background: #fff
+
+            +flex-box
+
+            +align-center
+
+            +justify-between
+
+            a
+                width: 0.6rem
+                text-align: center
+                display: block
+                font-size: 0.12rem
+                margin: 0 0.07rem
+
+            span
+                line-height: 1.2
+                display: block
+                overflow: hidden
+
+            img
+                margin-top: 0.06rem
+                width: 0.4rem
+                height: 0.4rem
+                display: inline-block
+
+.main-ads-zone
+    height: 1.58rem
+    margin-top: 0.04rem
+
+    +box
+
+    +flex-box
+
+    +justify-between
+
+    a
+        width: 100%
+        height: 100%
+        display: block
+        font-size: 0
+
+        img
+            width: 100%
+            height: 100%
+
+.main-ads-l
+    width: 38.4%
+    height: 100%
+
+.main-ads-r
+    +flex-box
+
+    +justify-between
+
+    width: 61.4%
+    height: 100%
+    -webkit-flex-direction: column
+    flex-direction: column
+
+.main-ads-rt
+    height: 44%
+
+.main-ads-rb
+    +box
+
+    +flex-box
+
+    +justify-between
+
+    -webkit-align-items: flex-end
+    align-items: flex-end
+    height: 55.6%
+
+.main-ads-rbl, .main-ads-rbr
+    width: 49.8%
+    height: 99.5%
+
+.main-pinSelected-zone
+    margin-top: 0.04rem
+
+    a
+        display: block
+
+    h2
+        text-align: center
+        color: $primary-color
+        background: #fffeff
+        padding: 0.06rem 0 0.06rem 0
+
+    img
+        width: 100%
+        height: 100%
+
+.main-ads
+    margin-top: 0.04rem
+
+    a
+        display: block
+
+    img
+        width: 100%
+        height: 100%
+
+.main-specialSale-zone
+    margin-top: 0.04rem
+
+    a
+        display: block
+
+    h2
+        text-align: center
+        color: $primary-color
+        background: #fffeff
+        padding: 0.06rem 0 0.06rem 0
+
+    img
+        width: 100%
+        height: 100%
+
+.main-hotSale-zone
+    margin: 0.04rem 0
+
+    .goods-list-block
+        &.hot-slick
+            margin: 0 0.04rem
+
+    .hot-stick-title
+        text-align: center
+        background: #fff
+        margin-bottom: 0.04rem
+
+        h3
+            font-size: 0.13rem
+            height: 0.32rem
+            line-height: 0.32rem
+            color: $primary-color
+
+        p
+            font-size: 0.1rem
+            height: 0.14rem
+            color: #b2b2b2
+            padding: 0 0.08rem 0.09rem 0.08rem
+            vertical-align: middle
+
+    .goods-item
+        width: 49.47%
+        margin-bottom: 0.04rem
+
+        &:nth-child(2n-1)
+            width: 49.47%
+
+    .import-price
+        &.home-stick-price
+            color: #fa3f00
+
+    h2
+        text-align: center
+        color: #000
+        background: #fffeff
+        padding: 0.09rem 0
+        font-size: 0.15rem
+        font-weight: bold
+
+    a
+        margin-bottom: 0.04rem
+        width: 50%
+        float: left
+
+        &:nth-of-type(2n) .imgbox
+            margin-right: 0
+
+        .imgbox
+            margin-right: 0.04rem
+
+            img
+                width: 100%
+
+.swiper-nav
+    margin: 0 0 0.1rem 0
+    background: #fff
+    overflow: hidden
+
+    a
+        width: 0.5rem
+        margin: 0.02rem 0.11rem 0.06rem
+        text-align: center
+        display: block
+        font-size: 0.12rem
+        line-height: 1
+
+    span
+        line-height: 1.2
+        display: inline-block
+        overflow: hidden
+
+    img
+        width: 0.5rem
+        height: 0.5rem
+        display: inline-block
+
+.swiper-menubg
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 0.4rem
+    z-index: 1
+    display: none
+    background: rgba(255, 255, 255, 0.9)
+
+    +box-shadow(0 0.02rem 0.04rem 0 rgba(0, 0, 0, 0.2))
+
+.swiper-menu
+    margin: 0 auto
+
+    .swiper-wrapper
+        z-index: 10
+
+    ul
+        line-height: 0.4rem
+        font-size: 0.14rem
+        color: #666
+
+    a
+        display: block
+        padding: 0 0.15rem
+        width: auto
+        height: 0.38rem
+        line-height: 0.4rem
+
+        &.active
+            border-bottom: 0.02rem solid $primary-color
+            color: $primary-color
+
+.hot-sale-list .swiper-wrapper
+    z-index: 0
+
+.swiper-container .swiper-slide a
+    font-size: 0
+    display: block
+
+.showcase-title
+    +box
+
+    +box-align
+
+    +box-pack
+
+    background: #fff
+    margin-top: 0.04rem
+
+    h3
+        font-size: 0.14rem
+        height: 0.32rem
+        line-height: 0.32rem
+        overflow: hidden
+        color: #f9b001
+
+.home-showcase-box
+    background: #fff
+    text-align: center
+    margin-bottom: 0.02rem
+
+    .hot-stick-list
+        a
+            display: block
+
+        img
+            width: 100%
+            height: 100%
+
+    .hot-inner-list
+        overflow: hidden
+        display: block
+        padding-left: 0.04rem
+        padding-right: 0.04rem
+
+        h3
+            color: #010101
+            font-size: 0.12rem
+            line-height: 0.14rem
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            overflow: hidden
+            text-overflow: ellipsis
+
+        p.price-item
+            display: block
+            line-height: 18px
+
+            span
+                display: inline
+                position: relative
+                font-size: normal
+                margin: 0
+                background: 0 0
+                padding: 0
+                left: 0
+
+                &.actual-price
+                    color: #fa3f00
+                    font-size: 0.15rem
+
+                b
+                    display: inline
+                    font-size: 0.08rem
+                    vertical-align: bottom
+
+        .swiper-wrapper
+            z-index: 0
+
+        .home-show-more
+            height: 0.88rem
+            width: 0.64rem
+            margin-left: 0.16rem
+
+            +box
+
+            +box-align
+
+            +box-pack
+
+            span
+                display: block
+                margin: 0 auto
+                left: 0
+                font-size: 0.3rem
+                font-style: normal
+                overflow: hidden
+                color: #f9b001
+
+            h3
+                color: #8b8b8b
+                width: 0.64rem
+                height: 0.2rem
+                font-size: 0.1rem
+                line-height: 0.15rem
+                word-wrap: break-word
+
+        .hot-sale-goods
+            float: left
+            width: 1rem
+            margin-right: 0.08rem
+            display: block
+            margin-bottom: 0.04rem
+            position: relative
+
+            .tag
+                position: absolute
+                width: 0.8rem
+                height: 0.8rem
+                left: 0.1rem
+                top: 0.04rem
+                z-index: 2
+
+            .images
+                display: block
+                width: 0.8rem
+                height: 0.8rem
+                border: 0
+                position: relative
+                padding: 0.04rem
+                margin: 0 auto 0.06rem auto
+
+//media screen for IOS5
+@media screen and (max-device-width: 362px)
+    .home .swiper-nav .swiper-wrapper a
+        margin: 0 0.018rem
+
+    .main-hotSale-zone
+        .goods-item
+            width: 49.43%
+
+            &:nth-child(2n-1)
+                width: 49.43%
