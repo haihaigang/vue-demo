@@ -1,8 +1,9 @@
-import * as api from '../api'
+import MemberApi from '../api'
 import * as types from './mutation-types'
 
-export const getAllMessages = ({ commit }) => {
-  api.getAllMessages(messages => {
+console.log(MemberApi)
+export const getDetail = ({ commit }) => {
+  MemberApi.getDetail(messages => {
     commit(types.RECEIVE_ALL, {
       messages
     })

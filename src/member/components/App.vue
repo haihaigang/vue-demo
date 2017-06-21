@@ -6,7 +6,6 @@
         <avatar :url="avatar"></avatar>
         <me-nav></me-nav>
         <quick :data="quickData"></quick>
-        <quick :data="quickData2"></quick>
     </div>
 </template>
 <!--控制-->
@@ -33,9 +32,6 @@ export default {
         quickData(){
             return this.$store.getters.quickData
         },
-        quickData2(){
-            return this.$store.getters.quickData2
-        }
     },
     computed2: mapGetters([
         'avatar'

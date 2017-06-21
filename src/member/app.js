@@ -4,7 +4,7 @@ import '../assets/sass/rby.scss';
 import Vue from 'vue'
 import App from './components/App.vue'
 import store from './store'
-import { getAllMessages } from './store/actions'
+import { getDetail } from './store/actions'
 
 Vue.config.debug = true
 
@@ -18,4 +18,4 @@ new Vue({
   render: h => h(App)
 })
 
-getAllMessages(store)
+getDetail(store)

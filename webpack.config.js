@@ -56,7 +56,8 @@ module.exports = {
     resolve: {
         alias: {
             //vuex: path.resolve(__dirname, '../src/index.esm.js')
-        }
+        },
+        extensions: ['.js', '.vue', '.sass', '.less', '.png', '.jpg', '.gif', '.eot', '.woff', '.svg', '.ttf']
     },
 
     plugins: [
