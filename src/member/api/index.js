@@ -7,11 +7,11 @@ class MemberApi extends BaseApi {
 		super();
 	}
 
-	getDetail(){
+	getDetail(cb){
 		this.send({
 			url: '/api/member/info/get'
 		}).then((response) =>{
-			console.log(response)
+			cb(response)
 		})
 	}
 

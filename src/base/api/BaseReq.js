@@ -141,6 +141,7 @@ class BaseReq {
         var token = Storage.get('AccessToken');
         if (token) {
             headers['X-Auth-Token'] = token;
+            headers['UserToken'] = token;
         }
 
         //处理成json提交数据，仅在请求头为json时
@@ -190,6 +191,7 @@ class BaseReq {
                         content[i].okey = content[i][options.key];
                     }
                 }
+                return data
             })
         } else {
             console.error('not supproted fetch')
