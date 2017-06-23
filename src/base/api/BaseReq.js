@@ -9,44 +9,25 @@ class BaseReq {
         this._path = BaseConfig.PATH; //路由前缀路径
         this._timeout = 15000; //请求超时时间
         this._cache = true; //是否缓存
-        this._isLoading = false; //是否正在请求
         this._queue = {}; //请求队列
         this._onEnd = function() {}; //当请求都完成
-        this._timeTick = 0; //每次请求的时间
         this._responseKey = 'body.content'; //默认接口返回的内容结构体
         this._timestamp = undefined; //每次接口返回的当前服务器时间
     }
-
-    assign(options, opts) {
-        if ('assign' in Object) {
-            return Object.assign(options, opts);
-        } else {
-            for (var i in opts) {
-                options[i] = opts[i];
-            }
-            return options;
-        }
-    }
-
 
     /**
      * 搜索
      * @param options
      */
     search(options) {
-        if (this._isLoading) {
-            console.log('search wait is loading')
-            return;
-        }
-
-        this.extend(options, {
+        this._processOptions(options, {
             key: 'id',
             data: {},
             logtype: 'search',
             showLoading: true,
         });
 
-        this.extend(options.data, {
+        this._extend(options.data, {
             page: 1,
             size: this._pageSize
         });
@@ -57,40 +38,26 @@ class BaseReq {
     /**
      * 保存
      * @param options
-     * @param callback－成功回调
-     * @param allbackError－失败回调
      */
-    save(options, callback, callbackError) {
-        if (this._isLoading) {
-            console.log('save wait is loading')
-            return;
-        }
-
-        this.extend(options, {
-            type: 'POST',
+    save(options) {
+        this._processOptions(options, {
+            method: 'POST',
             logtype: 'save',
             showLoading: true,
             loadingText: '保存中……',
             contentType: 'application/json'
         });
 
-        this._fetch(options, callback, callbackError);
+        this._fetch(options);
     }
 
     /**
      * 删除
      * @param options
-     * @param callback－成功回调
-     * @param allbackError－失败回调
      */
     remove(options) {
-        if (this._isLoading) {
-            console.log('remove wait is loading')
-            return;
-        }
-
-        this.extend(options, {
-            type: 'POST',
+        this._processOptions(options, {
+            method: 'POST',
             logtype: 'remove',
             showLoading: true,
             loadingText: '删除中……',
@@ -99,22 +66,44 @@ class BaseReq {
         return this._fetch(options);
     }
 
+    /**
+     * 自定义请求
+     * @param options 
+     */
     send(options) {
-        var opt = {};
-        if (typeof options == 'string') {
-            opt.url = options;
-        } else if (typeof options == 'object') {
-            opt = options;
-        }
+        this._processOptions(options, {
+            method: 'GET',
+            logtype: 'default',
+            showLoading: false,
+            loadingText: '加载中……',
+        });
+
         return this._fetch(options);
     }
 
+    /**
+     * 通用处理异步请求的参数
+     * @param options 参数
+     * @param defOptions 默认参数
+     * @return 处理后的参数
+     */
+    _processOptions(options, defOptions) {
+        if (typeof options == 'string') {
+            options = {
+                url: options
+            }
+        } else if (typeof options == 'object') {}
+
+        this._extend(options, defOptions);
+
+        return options;
+    }
 
     /**
      * 发送请求
-     * @param url 请求地址
      * @param options 请求参数
      * {
+     *  url: '请求地址',
      *  method: '请求使用的方法，如 GET、 POST'
      *  headers: '请求的头信息'
      *  body: '请求的 body 信息：可能是一个 Blob、 BufferSource、 FormData、 URLSearchParams 或者 USVString 对象。 注意 GET 或 HEAD 方法的请求不能包含 body 信息。'
@@ -128,7 +117,7 @@ class BaseReq {
             headers = {},
             loadingTip,
             startTick = Date.now();
-        that._isLoading = true;
+
         that._queue[options.url] = true;
 
         options = options || {};
@@ -149,7 +138,7 @@ class BaseReq {
             options.body = JSON.stringify(options.data);
         }
 
-        this.extend(options, {
+        this._extend(options, {
             method: 'GET',
             credentials: 'include',
             headers: headers
@@ -157,14 +146,12 @@ class BaseReq {
 
         if ('fetch' in window) {
             return fetch(options.url, options).then((response) => {
-                that._isLoading = false;
                 delete(that._queue[options.url]);
-                if (that.isEmpty(that._queue) && typeof that._onEnd == 'function') {
+                if (that._isEmpty(that._queue) && typeof that._onEnd == 'function') {
                     that._onEnd.call(this);
                 }
 
-                that._timeTick = Date.now() - startTick;
-                that.logged('time', '请求耗时约' + that._timeTick + 'ms', options.url);
+                that._logged('time', '请求耗时约' + (Date.now() - startTick) + 'ms', options.url);
 
                 if (response.ok) {
                     return response.json();
@@ -185,16 +172,23 @@ class BaseReq {
                     if (options.responseKey) {
                         that._responseKey = options.responseKey;
                     }
-                    var content = that.getDataWithKey(data, that._responseKey);
+                    var content = that._getDataWithKey(data, that._responseKey);
                     //若请求的列表数据，需要添加key键，用于操作栏使用
                     for (var i = 0, len = content.length; i < len; i++) {
                         content[i].okey = content[i][options.key];
                     }
+
+                    return content;
                 }
-                return data
+
+                if ('body' in data) {
+                    return data.body;
+                }
+
+                return data;
             })
         } else {
-            console.error('not supproted fetch')
+            console.error('fetch not supproted')
         }
     }
 
@@ -203,7 +197,7 @@ class BaseReq {
      * @param  options 被扩展参数 
      * @param  opt 扩展参数
      */
-    extend(options, opt) {
+    _extend(options, opt) {
         options = options || {};
         for (var i in opt) {
             options[i] = typeof options[i] == 'undefined' ? opt[i] : options[i];
@@ -216,7 +210,7 @@ class BaseReq {
      * @param message 错误内容
      * @param url 错误地址
      */
-    logged(type, message, url) {
+    _logged(type, message, url) {
         console.info('[' + type + '] ' + message + ' url=' + url);
     }
 
@@ -225,7 +219,7 @@ class BaseReq {
      * @param  {[type]}
      * @return {Boolean}
      */
-    isEmpty(obj) {
+    _isEmpty(obj) {
         var flag = true;
         for (var i in obj) {
             flag = false;
@@ -241,7 +235,7 @@ class BaseReq {
      * @param keyStr 目标描述字符串，eg:a.b.c
      * @return object
      */
-    getDataWithKey(data, keyStr) {
+    _getDataWithKey(data, keyStr) {
         if (keyStr.indexOf('.') == -1 && keyStr.indexOf('[') == -1) {
             return data[keyStr];
         }

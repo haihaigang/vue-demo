@@ -1,5 +1,3 @@
-<!--样式-->
-<style src="../css/index.css"></style>
 <!--模板-->
 <template>
     <div class="chatapp">
