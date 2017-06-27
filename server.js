@@ -26,7 +26,7 @@ app.use('/api', proxyMiddleware({
     pathRewrite: {
         '^/api/': '/',
     }
-}))
+}));
 
 const port = process.env.PORT || 8087
 module.exports = app.listen(port, () => {

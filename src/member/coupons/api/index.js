@@ -5,9 +5,10 @@ class Api extends BaseApi {
         super();
     }
 
-    getDetail(cb) {
+    getCoupons(params, cb) {
         this.send({
-            url: '/api/member/info/get'
+            url: '/api/member/coupon/getList',
+            params: params
         }).then((response) => {
             cb(response)
         })

@@ -145,7 +145,9 @@ class BaseReq {
         });
 
         if ('fetch' in window) {
-            return fetch(options.url, options).then((response) => {
+            var url = this._processUrl(options.url, options.params);
+
+            return fetch(url, options).then((response) => {
                 delete(that._queue[options.url]);
                 if (that._isEmpty(that._queue) && typeof that._onEnd == 'function') {
                     that._onEnd.call(this);
@@ -259,6 +261,30 @@ class BaseReq {
             i++;
         }
         return tempObj;
+    }
+
+    /**
+     * 处理url
+     * @param url 请求地址
+     * @param params 参数
+     * @return 拼接后的请求地址
+     */
+    _processUrl(url, params) {
+        var paramArr = [];
+
+        if (params) {
+            for (var i in params) {
+                paramArr.push(i + '=' + params[i]);
+            }
+        }
+
+        var paramStr = paramArr.join('&');
+
+        if (url.indexOf('?') >= 0) {
+            return url + '&' + paramStr;
+        } else {
+            return url + '?' + paramStr;
+        }
     }
 }
 
